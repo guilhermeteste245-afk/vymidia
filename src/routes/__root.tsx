@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "vymidia" },
+      { name: "description", content: "VY Mídia: Elevate is a premium website showcasing digital strategy, content production, and brand positioning services." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "vymidia" },
+      { property: "og:description", content: "VY Mídia: Elevate is a premium website showcasing digital strategy, content production, and brand positioning services." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "vymidia" },
+      { name: "twitter:description", content: "VY Mídia: Elevate is a premium website showcasing digital strategy, content production, and brand positioning services." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c5e2003-55be-48c5-afd6-d89eae9f62b8/id-preview-d02227c0--da2efbc3-d766-4491-bb2a-cde455cd2449.lovable.app-1780514931477.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c5e2003-55be-48c5-afd6-d89eae9f62b8/id-preview-d02227c0--da2efbc3-d766-4491-bb2a-cde455cd2449.lovable.app-1780514931477.png" },
     ],
     links: [
       {
