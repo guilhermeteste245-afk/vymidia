@@ -119,13 +119,12 @@ function Index() {
       {/* HERO — Cover image (begins below the fixed navbar, full image visible) */}
       <section
         id="top"
-        className="relative w-full overflow-hidden bg-black flex items-center justify-center pt-[64px] md:pt-[72px]"
-        style={{ minHeight: "100vh", height: "100vh" }}
+        className="relative w-full overflow-hidden bg-black flex items-center justify-center pt-20 md:pt-[72px] h-[85vh] md:h-screen min-h-[520px]"
       >
         <img
           src={heroCover.url}
           alt="VY Mídia — Portfólio"
-          className="max-h-full max-w-full w-auto h-auto object-contain select-none"
+          className="max-h-full max-w-full w-auto h-auto object-contain select-none px-4"
           draggable={false}
         />
 
@@ -134,6 +133,7 @@ function Index() {
           ↓ Scroll
         </div>
       </section>
+
 
 
 
