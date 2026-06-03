@@ -17,6 +17,15 @@ import fuscarosa from "@/assets/fuscarosa.asset.json";
 import team from "@/assets/team.asset.json";
 import juliana from "@/assets/juliana.asset.json";
 import heroCover from "@/assets/hero-cover.asset.json";
+import heroMobile from "@/assets/hero-mobile.asset.json";
+import manosPoster from "@/assets/manos-poster.asset.json";
+import maesPoster from "@/assets/maes-poster.asset.json";
+import flacidezPoster from "@/assets/flacidez-poster.asset.json";
+import inssPoster from "@/assets/inss-poster.asset.json";
+import internetPoster from "@/assets/internet-poster.asset.json";
+import churrascariaPoster from "@/assets/churrascaria-poster.asset.json";
+import fuscarosaPoster from "@/assets/fuscarosa-poster.asset.json";
+import julianaPoster from "@/assets/juliana-poster.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
