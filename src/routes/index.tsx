@@ -99,7 +99,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 glass">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:py-3.5">
           <a href="#top" className="flex items-center gap-3">
             <span className="font-display text-2xl tracking-tight text-foreground">V<span className="text-gold">Y</span></span>
             <span className="hidden sm:inline text-[10px] tracking-luxury text-muted-foreground uppercase">Mídia</span>
@@ -116,22 +116,25 @@ function Index() {
         </div>
       </header>
 
-      {/* HERO — Cover image */}
-      <section id="top" className="relative h-screen min-h-[640px] w-full overflow-hidden bg-black">
+      {/* HERO — Cover image (begins below the fixed navbar, full image visible) */}
+      <section
+        id="top"
+        className="relative w-full overflow-hidden bg-black flex items-center justify-center pt-[64px] md:pt-[72px]"
+        style={{ minHeight: "100vh", height: "100vh" }}
+      >
         <img
           src={heroCover.url}
           alt="VY Mídia — Portfólio"
-          className="absolute inset-0 h-full w-full object-cover object-center select-none"
+          className="max-h-full max-w-full w-auto h-auto object-contain select-none"
           draggable={false}
         />
-        {/* subtle bottom gradient for legibility on small screens */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
 
         {/* scroll cue */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.4em] uppercase text-white/50">
           ↓ Scroll
         </div>
       </section>
+
 
 
       {/* QUEM SOMOS */}
