@@ -13,16 +13,17 @@ import flacidez from "@/assets/flacidez.asset.json";
 import inss from "@/assets/inss.asset.json";
 import internet from "@/assets/internet.asset.json";
 import churrascaria from "@/assets/churrascaria.asset.json";
-import hero from "@/assets/hero.asset.json";
+import fuscarosa from "@/assets/fuscarosa.asset.json";
+import team from "@/assets/team.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VY Mídia — Estratégia. Criação. Resultado." },
-      { name: "description", content: "Agência premium de estratégia digital, produção de conteúdo e videomaker. Posicionamento de marcas com criatividade e resultado." },
-      { property: "og:title", content: "VY Mídia — Estratégia. Criação. Resultado." },
-      { property: "og:description", content: "Produção de conteúdo, branding e posicionamento digital para marcas que crescem com estratégia." },
-      { property: "og:image", content: hero.url },
+      { title: "VY Mídia — Portfólio" },
+      { name: "description", content: "Portfólio editorial da VY Mídia. Estratégia Digital, Produção de Conteúdo e Videomaker para marcas premium." },
+      { property: "og:title", content: "VY Mídia — Portfólio" },
+      { property: "og:description", content: "Estratégia Digital • Produção de Conteúdo • Videomaker." },
+      { property: "og:image", content: team.url },
     ],
   }),
   component: Index,
@@ -32,12 +33,33 @@ const CATEGORIES = ["Todos", "Restaurantes", "Empresas", "Imobiliário", "Marcas
 type Cat = typeof CATEGORIES[number];
 
 const PORTFOLIO = [
-  { src: manos.url, title: "Mano's Gastrobar", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat },
-  { src: churrascaria.url, title: "Churrascaria 100Tenário", client: "Tradição • Gastronomia", category: "Restaurantes" as Cat },
-  { src: flacidez.url, title: "Estética & Bem-Estar", client: "Clínica de Estética", category: "Empresas" as Cat },
-  { src: inss.url, title: "Direito Previdenciário", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat },
-  { src: internet.url, title: "Crimes Digitais", client: "Advocacia Especializada", category: "Marcas Pessoais" as Cat },
-  { src: maes.url, title: "Campanha Dia das Mães", client: "Datas Comemorativas", category: "Eventos" as Cat },
+  { src: manos.url, title: "Mano's Gastrobar", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
+  { src: churrascaria.url, title: "Churrascaria 100Tenário", client: "Tradição • Gastronomia", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/churrascaria100tenario/" },
+  { src: fuscarosa.url, title: "Fusca Rosa", client: "Bar • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/fuskarosabeer/" },
+  { src: flacidez.url, title: "Dra Ana", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/" },
+  { src: inss.url, title: "tiecherpegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
+  { src: internet.url, title: "juliolabhacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
+  { src: maes.url, title: "Jardim dos Fuscas", client: "Eventos • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
+];
+
+const CLIENTES = [
+  { name: "Mano's Gastrobar", url: "https://www.instagram.com/manosgastrobar/" },
+  { name: "Churrascaria 100Tenário", url: "https://www.instagram.com/churrascaria100tenario/" },
+  { name: "Fusca Rosa", url: "https://www.instagram.com/fuskarosabeer/" },
+  { name: "Jardim dos Fuscas", url: "https://www.instagram.com/jardimdosfuscas/" },
+  { name: "Dra Ana", url: "https://www.instagram.com/draanapaulaneves_/" },
+  { name: "tiecherpegoraro", url: "https://www.instagram.com/tiecherpegoraro/" },
+  { name: "juliolabhacker", url: "https://www.instagram.com/juliolabhacker/" },
+  { name: "Ibagy", url: "https://www.instagram.com/ibagy/" },
+  { name: "Estética & Bem-Estar", url: "#" },
+  { name: "Direito Previdenciário", url: "#" },
+  { name: "Crimes Digitais", url: "#" },
+  { name: "Eventos Premium", url: "#" },
+  { name: "Branding Studio", url: "#" },
+  { name: "Lifestyle Co.", url: "#" },
+  { name: "Gastronomia Sul", url: "#" },
+  { name: "Imobiliária Prime", url: "#" },
+  { name: "Beauty Lab", url: "#" },
 ];
 
 const SERVICES = [
@@ -83,6 +105,7 @@ function Index() {
             <a href="#sobre" className="hover:text-gold transition-colors">Quem Somos</a>
             <a href="#servicos" className="hover:text-gold transition-colors">Serviços</a>
             <a href="#portfolio" className="hover:text-gold transition-colors">Portfólio</a>
+            <a href="#clientes" className="hover:text-gold transition-colors">Clientes</a>
             <a href="#contato" className="hover:text-gold transition-colors">Contato</a>
           </nav>
           <a href="#contato" className="hidden md:inline-flex items-center gap-2 border border-gold/60 px-5 py-2.5 text-[10px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all">
@@ -91,45 +114,72 @@ function Index() {
         </div>
       </header>
 
-      {/* HERO */}
-      <section id="top" className="relative grain hero-radial flex min-h-screen items-center justify-center pt-32 pb-24">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] max-w-[900px] aspect-square rounded-full bg-gold/5 blur-[120px]" />
-        <div className="relative mx-auto max-w-6xl px-6 text-center">
+      {/* HERO — Editorial, full-screen, minimal */}
+      <section id="top" className="relative h-screen min-h-[700px] w-full overflow-hidden bg-black">
+        {/* subtle vignette */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#000_85%)]" />
+        {/* fine grain */}
+        <div className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay"
+             style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px)", backgroundSize: "3px 3px" }} />
+
+        {/* Giant metallic VY watermark */}
+        <div className="absolute inset-0 flex items-center justify-center select-none">
+          <span
+            className="font-display italic leading-none text-transparent bg-clip-text"
+            style={{
+              fontSize: "clamp(20rem, 60vw, 60rem)",
+              backgroundImage:
+                "linear-gradient(180deg, #f3e7c9 0%, #b08b57 35%, #5a4528 55%, #d9b87a 75%, #2a1f10 100%)",
+              WebkitBackgroundClip: "text",
+              filter: "drop-shadow(0 30px 80px rgba(176,139,87,0.25))",
+              letterSpacing: "-0.04em",
+            }}
+          >
+            VY
+          </span>
+        </div>
+
+        {/* Editorial overlay title "Portfólio" */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6">
           <Reveal>
-            <p className="text-[10px] tracking-luxury uppercase text-gold/80 mb-8">
-              Estratégia • Criação • Resultado
+            <p className="text-center text-[10px] tracking-[0.45em] uppercase text-gold/70 mb-10">
+              VY Mídia — MMXXII
             </p>
           </Reveal>
-          <Reveal delay={150}>
-            <h1 className="font-display text-[clamp(3rem,11vw,9rem)] leading-[0.95] tracking-tight">
-              <span className="block italic font-light text-gradient-gold">Estratégia.</span>
-              <span className="block font-light text-foreground">Criação.</span>
-              <span className="block italic font-light text-gradient-gold">Resultado.</span>
+          <Reveal delay={200}>
+            <h1 className="flex items-baseline justify-center leading-none">
+              <span
+                className="font-display italic font-light text-[#F5F5F5]"
+                style={{ fontSize: "clamp(4rem, 14vw, 14rem)", letterSpacing: "-0.02em" }}
+              >
+                Port
+              </span>
+              <span
+                className="font-sans font-black uppercase text-[#F5F5F5]"
+                style={{ fontSize: "clamp(3.2rem, 11vw, 11rem)", letterSpacing: "-0.04em" }}
+              >
+                fólio
+              </span>
             </h1>
           </Reveal>
-          <Reveal delay={400}>
-            <p className="mx-auto mt-10 max-w-2xl text-base md:text-lg font-light text-muted-foreground leading-relaxed">
-              Produção de conteúdo, branding e posicionamento digital para marcas que desejam crescer com estratégia.
-            </p>
-          </Reveal>
-          <Reveal delay={600}>
-            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#portfolio" className="group inline-flex items-center gap-3 bg-gold px-8 py-4 text-[10px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all">
-                Ver Portfólio
-                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
-              </a>
-              <a href="#contato" className="group inline-flex items-center gap-3 border border-foreground/20 px-8 py-4 text-[10px] tracking-luxury uppercase text-foreground hover:border-gold hover:text-gold transition-all">
-                Solicitar Orçamento
-              </a>
+        </div>
+
+        {/* Bottom minimal trio */}
+        <div className="absolute bottom-10 inset-x-0 px-6">
+          <Reveal delay={500}>
+            <div className="mx-auto flex max-w-5xl flex-col md:flex-row items-center justify-center gap-4 md:gap-16 text-[11px] tracking-[0.4em] uppercase text-foreground/80">
+              <span>Estratégia Digital</span>
+              <span className="hidden md:block h-px w-10 bg-gold/50" />
+              <span>Produção de Conteúdo</span>
+              <span className="hidden md:block h-px w-10 bg-gold/50" />
+              <span>Videomaker</span>
             </div>
           </Reveal>
-          <div className="mt-24 flex items-center justify-center gap-8 text-[10px] tracking-editorial uppercase text-muted-foreground/60">
-            <span>Estratégia Digital</span>
-            <span className="h-px w-8 bg-gold/40" />
-            <span>Produção de Conteúdo</span>
-            <span className="h-px w-8 bg-gold/40 hidden sm:block" />
-            <span className="hidden sm:inline">Videomaker</span>
-          </div>
+        </div>
+
+        {/* scroll cue */}
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.4em] uppercase text-muted-foreground/50">
+          ↓ Scroll
         </div>
       </section>
 
@@ -153,7 +203,7 @@ function Index() {
             <div className="mt-12 grid grid-cols-3 gap-8 max-w-md">
               {[
                 { n: "+50", l: "Projetos" },
-                { n: "+30", l: "Clientes" },
+                { n: "+15", l: "Clientes" },
                 { n: "100%", l: "Dedicação" },
               ].map((s) => (
                 <div key={s.l}>
@@ -166,10 +216,10 @@ function Index() {
           <Reveal delay={200}>
             <div className="relative">
               <div className="absolute -inset-4 border border-gold/20 -z-10" />
-              <img src={hero.url} alt="VY Mídia — Portfólio" className="w-full object-cover aspect-[4/5] grayscale-[20%]" />
+              <img src={team.url} alt="Equipe VY Mídia" className="w-full object-cover aspect-[4/5]" />
               <div className="absolute -bottom-6 -right-6 glass px-6 py-4">
                 <p className="text-[10px] tracking-luxury uppercase text-gold">Desde 2022</p>
-                <p className="font-display text-xl mt-1">Estética Editorial</p>
+                <p className="font-display text-xl mt-1">Content Creates Brand</p>
               </div>
             </div>
           </Reveal>
@@ -234,6 +284,33 @@ function Index() {
               <Reveal key={v.title} delay={i * 80}>
                 <VideoCard {...v} />
               </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENTES */}
+      <section id="clientes" className="relative py-32 md:py-40 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal className="text-center max-w-2xl mx-auto mb-16">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Clientes</p>
+            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+              Marcas que confiam na <span className="italic text-gradient-gold">VY</span>.
+            </h2>
+          </Reveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border">
+            {CLIENTES.map((c) => (
+              <a
+                key={c.name}
+                href={c.url}
+                target="_blank"
+                rel="noreferrer"
+                className="group bg-background px-6 py-8 flex items-center justify-center text-center hover:bg-card transition-colors"
+              >
+                <span className="font-display text-xl text-foreground/80 group-hover:text-gold transition-colors">
+                  {c.name}
+                </span>
+              </a>
             ))}
           </div>
         </div>

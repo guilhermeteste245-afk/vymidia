@@ -1,14 +1,15 @@
 import { useRef, useState } from "react";
-import { Play, Pause } from "lucide-react";
+import { Play, Pause, Instagram } from "lucide-react";
 
 interface Props {
   src: string;
   title: string;
   client: string;
   category: string;
+  instagram?: string;
 }
 
-export function VideoCard({ src, title, client, category }: Props) {
+export function VideoCard({ src, title, client, category, instagram }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
 
@@ -47,10 +48,22 @@ export function VideoCard({ src, title, client, category }: Props) {
         </button>
       </div>
       <div className="flex items-start justify-between gap-4 border-t border-border px-5 py-4">
-        <div>
+        <div className="min-w-0">
           <p className="text-[10px] tracking-luxury text-gold uppercase">{category}</p>
-          <h3 className="mt-2 font-display text-xl text-foreground leading-tight">{title}</h3>
-          <p className="mt-1 text-xs text-muted-foreground">{client}</p>
+          {instagram ? (
+            <a
+              href={instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-flex items-center gap-2 font-display text-xl text-foreground leading-tight hover:text-gold transition-colors"
+            >
+              {title}
+              <Instagram className="h-4 w-4 opacity-70" strokeWidth={1.2} />
+            </a>
+          ) : (
+            <h3 className="mt-2 font-display text-xl text-foreground leading-tight">{title}</h3>
+          )}
+          <p className="mt-1 text-xs text-muted-foreground truncate">{client}</p>
         </div>
       </div>
     </div>
