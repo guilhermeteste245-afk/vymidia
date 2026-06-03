@@ -15,6 +15,7 @@ import internet from "@/assets/internet.asset.json";
 import churrascaria from "@/assets/churrascaria.asset.json";
 import fuscarosa from "@/assets/fuscarosa.asset.json";
 import team from "@/assets/team.asset.json";
+import juliana from "@/assets/juliana.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,8 +38,9 @@ const PORTFOLIO = [
   { src: churrascaria.url, title: "Churrascaria 100Tenário", client: "Tradição • Gastronomia", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/churrascaria100tenario/" },
   { src: fuscarosa.url, title: "Fusca Rosa", client: "Bar • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/fuskarosabeer/" },
   { src: flacidez.url, title: "Dra Ana", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/" },
-  { src: inss.url, title: "tiecherpegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
-  { src: internet.url, title: "juliolabhacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
+  { src: inss.url, title: "Tiecher Pegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
+  { src: internet.url, title: "Julio Lab Hacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
+  { src: juliana.url, title: "Juliana Aranda", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
   { src: maes.url, title: "Jardim dos Fuscas", client: "Eventos • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
 ];
 
