@@ -130,14 +130,14 @@ function Index() {
         id="top"
         className="relative w-full overflow-hidden bg-black flex items-center justify-center h-screen min-h-[560px]"
       >
-        {/* Mobile: full-bleed cover focused on the VY monogram */}
+        {/* Mobile: dedicated vertical artwork, full-bleed cover */}
         <img
-          src={heroCover.url}
+          src={heroMobile.url}
           alt="VY Mídia — Portfólio"
           className="md:hidden absolute inset-0 h-full w-full object-cover object-center select-none"
           draggable={false}
         />
-        {/* Desktop / tablet: full image, no crop */}
+        {/* Desktop / tablet: horizontal cover, full image visible */}
         <img
           src={heroCover.url}
           alt=""
