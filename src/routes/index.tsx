@@ -16,6 +16,7 @@ import churrascaria from "@/assets/churrascaria.asset.json";
 import fuscarosa from "@/assets/fuscarosa.asset.json";
 import team from "@/assets/team.asset.json";
 import juliana from "@/assets/juliana.asset.json";
+import heroCover from "@/assets/hero-cover.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
