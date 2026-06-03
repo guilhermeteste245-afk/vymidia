@@ -116,74 +116,23 @@ function Index() {
         </div>
       </header>
 
-      {/* HERO — Editorial, full-screen, minimal */}
-      <section id="top" className="relative h-screen min-h-[700px] w-full overflow-hidden bg-black">
-        {/* subtle vignette */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#000_85%)]" />
-        {/* fine grain */}
-        <div className="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay"
-             style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px)", backgroundSize: "3px 3px" }} />
-
-        {/* Giant metallic VY watermark */}
-        <div className="absolute inset-0 flex items-center justify-center select-none">
-          <span
-            className="font-display italic leading-none text-transparent bg-clip-text"
-            style={{
-              fontSize: "clamp(20rem, 60vw, 60rem)",
-              backgroundImage:
-                "linear-gradient(180deg, #f3e7c9 0%, #b08b57 35%, #5a4528 55%, #d9b87a 75%, #2a1f10 100%)",
-              WebkitBackgroundClip: "text",
-              filter: "drop-shadow(0 30px 80px rgba(176,139,87,0.25))",
-              letterSpacing: "-0.04em",
-            }}
-          >
-            VY
-          </span>
-        </div>
-
-        {/* Editorial overlay title "Portfólio" */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-6">
-          <Reveal>
-            <p className="text-center text-[10px] tracking-[0.45em] uppercase text-gold/70 mb-10">
-              VY Mídia — MMXXII
-            </p>
-          </Reveal>
-          <Reveal delay={200}>
-            <h1 className="flex items-baseline justify-center leading-none">
-              <span
-                className="font-display italic font-light text-[#F5F5F5]"
-                style={{ fontSize: "clamp(4rem, 14vw, 14rem)", letterSpacing: "-0.02em" }}
-              >
-                Port
-              </span>
-              <span
-                className="font-sans font-black uppercase text-[#F5F5F5]"
-                style={{ fontSize: "clamp(3.2rem, 11vw, 11rem)", letterSpacing: "-0.04em" }}
-              >
-                fólio
-              </span>
-            </h1>
-          </Reveal>
-        </div>
-
-        {/* Bottom minimal trio */}
-        <div className="absolute bottom-10 inset-x-0 px-6">
-          <Reveal delay={500}>
-            <div className="mx-auto flex max-w-5xl flex-col md:flex-row items-center justify-center gap-4 md:gap-16 text-[11px] tracking-[0.4em] uppercase text-foreground/80">
-              <span>Estratégia Digital</span>
-              <span className="hidden md:block h-px w-10 bg-gold/50" />
-              <span>Produção de Conteúdo</span>
-              <span className="hidden md:block h-px w-10 bg-gold/50" />
-              <span>Videomaker</span>
-            </div>
-          </Reveal>
-        </div>
+      {/* HERO — Cover image */}
+      <section id="top" className="relative h-screen min-h-[640px] w-full overflow-hidden bg-black">
+        <img
+          src={heroCover.url}
+          alt="VY Mídia — Portfólio"
+          className="absolute inset-0 h-full w-full object-cover object-center select-none"
+          draggable={false}
+        />
+        {/* subtle bottom gradient for legibility on small screens */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
 
         {/* scroll cue */}
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.4em] uppercase text-muted-foreground/50">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.4em] uppercase text-white/50">
           ↓ Scroll
         </div>
       </section>
+
 
       {/* QUEM SOMOS */}
       <section id="sobre" className="relative py-32 md:py-40">
