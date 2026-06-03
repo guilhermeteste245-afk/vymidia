@@ -116,23 +116,33 @@ function Index() {
         </div>
       </header>
 
-      {/* HERO — Cover image (begins below the fixed navbar, full image visible) */}
+      {/* HERO — Cover image */}
       <section
         id="top"
-        className="relative w-full overflow-hidden bg-black flex items-center justify-center pt-20 md:pt-[72px] h-[85vh] md:h-screen min-h-[520px]"
+        className="relative w-full overflow-hidden bg-black flex items-center justify-center h-screen min-h-[560px]"
       >
+        {/* Mobile: full-bleed cover focused on the VY monogram */}
         <img
           src={heroCover.url}
           alt="VY Mídia — Portfólio"
-          className="max-h-full max-w-full w-auto h-auto object-contain select-none px-4"
+          className="md:hidden absolute inset-0 h-full w-full object-cover object-center select-none"
+          draggable={false}
+        />
+        {/* Desktop / tablet: full image, no crop */}
+        <img
+          src={heroCover.url}
+          alt=""
+          aria-hidden="true"
+          className="hidden md:block max-h-full max-w-full w-auto h-auto object-contain select-none pt-[72px]"
           draggable={false}
         />
 
         {/* scroll cue */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.4em] uppercase text-white/50">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.4em] uppercase text-white/60">
           ↓ Scroll
         </div>
       </section>
+
 
 
 
