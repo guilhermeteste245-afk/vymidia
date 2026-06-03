@@ -3,21 +3,29 @@ import { Play, Pause, Instagram } from "lucide-react";
 
 interface Props {
   src: string;
+  poster: string;
   title: string;
   client: string;
   category: string;
   instagram?: string;
 }
 
-export function VideoCard({ src, title, client, category, instagram }: Props) {
+export function VideoCard({ src, poster, title, client, category, instagram }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+  const [started, setStarted] = useState(false);
 
   const toggle = () => {
     const v = ref.current;
     if (!v) return;
-    if (v.paused) { v.play(); setPlaying(true); }
-    else { v.pause(); setPlaying(false); }
+    if (v.paused) {
+      v.play();
+      setPlaying(true);
+      setStarted(true);
+    } else {
+      v.pause();
+      setPlaying(false);
+    }
   };
 
   return (
@@ -26,12 +34,23 @@ export function VideoCard({ src, title, client, category, instagram }: Props) {
         <video
           ref={ref}
           src={src}
+          poster={poster}
           className="h-full w-full object-cover"
           playsInline
-          preload="metadata"
+          preload="none"
           onEnded={() => setPlaying(false)}
           onClick={toggle}
         />
+        {/* Poster overlay — guarantees no black frame on any device until user hits play */}
+        {!started && (
+          <img
+            src={poster}
+            alt={title}
+            className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+            loading="lazy"
+            draggable={false}
+          />
+        )}
         <button
           onClick={toggle}
           aria-label={playing ? "Pausar" : "Reproduzir"}
@@ -39,7 +58,7 @@ export function VideoCard({ src, title, client, category, instagram }: Props) {
             playing ? "opacity-0 group-hover:opacity-100" : "opacity-100"
           }`}
         >
-          <span className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40" />
+          <span className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30" />
           <span className="relative flex h-20 w-20 items-center justify-center rounded-full border border-gold/60 bg-black/40 backdrop-blur-md transition-transform duration-500 group-hover:scale-110">
             {playing
               ? <Pause className="h-6 w-6 text-gold" strokeWidth={1} />

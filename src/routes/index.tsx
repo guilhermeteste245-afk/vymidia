@@ -17,6 +17,15 @@ import fuscarosa from "@/assets/fuscarosa.asset.json";
 import team from "@/assets/team.asset.json";
 import juliana from "@/assets/juliana.asset.json";
 import heroCover from "@/assets/hero-cover.asset.json";
+import heroMobile from "@/assets/hero-mobile.asset.json";
+import manosPoster from "@/assets/manos-poster.asset.json";
+import maesPoster from "@/assets/maes-poster.asset.json";
+import flacidezPoster from "@/assets/flacidez-poster.asset.json";
+import inssPoster from "@/assets/inss-poster.asset.json";
+import internetPoster from "@/assets/internet-poster.asset.json";
+import churrascariaPoster from "@/assets/churrascaria-poster.asset.json";
+import fuscarosaPoster from "@/assets/fuscarosa-poster.asset.json";
+import julianaPoster from "@/assets/juliana-poster.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,14 +44,14 @@ const CATEGORIES = ["Todos", "Restaurantes", "Empresas", "Imobiliário", "Marcas
 type Cat = typeof CATEGORIES[number];
 
 const PORTFOLIO = [
-  { src: manos.url, title: "Mano's Gastrobar", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
-  { src: churrascaria.url, title: "Churrascaria 100Tenário", client: "Tradição • Gastronomia", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/churrascaria100tenario/" },
-  { src: fuscarosa.url, title: "Fusca Rosa", client: "Bar • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/fuskarosabeer/" },
-  { src: flacidez.url, title: "Dra Ana", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/" },
-  { src: inss.url, title: "Tiecher Pegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
-  { src: internet.url, title: "Julio Lab Hacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
-  { src: juliana.url, title: "Juliana Aranda", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
-  { src: maes.url, title: "Jardim dos Fuscas", client: "Eventos • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
+  { src: manos.url, poster: manosPoster.url, title: "Mano's Gastrobar", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
+  { src: churrascaria.url, poster: churrascariaPoster.url, title: "Churrascaria 100Tenário", client: "Tradição • Gastronomia", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/churrascaria100tenario/" },
+  { src: fuscarosa.url, poster: fuscarosaPoster.url, title: "Fusca Rosa", client: "Bar • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/fuskarosabeer/" },
+  { src: flacidez.url, poster: flacidezPoster.url, title: "Dra Ana", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/" },
+  { src: inss.url, poster: inssPoster.url, title: "Tiecher Pegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
+  { src: internet.url, poster: internetPoster.url, title: "Julio Lab Hacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
+  { src: juliana.url, poster: julianaPoster.url, title: "Juliana Aranda", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
+  { src: maes.url, poster: maesPoster.url, title: "Jardim dos Fuscas", client: "Eventos • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
 ];
 
 const CLIENTES = [
@@ -121,14 +130,14 @@ function Index() {
         id="top"
         className="relative w-full overflow-hidden bg-black flex items-center justify-center h-screen min-h-[560px]"
       >
-        {/* Mobile: full-bleed cover focused on the VY monogram */}
+        {/* Mobile: dedicated vertical artwork, full-bleed cover */}
         <img
-          src={heroCover.url}
+          src={heroMobile.url}
           alt="VY Mídia — Portfólio"
           className="md:hidden absolute inset-0 h-full w-full object-cover object-center select-none"
           draggable={false}
         />
-        {/* Desktop / tablet: full image, no crop */}
+        {/* Desktop / tablet: horizontal cover, full image visible */}
         <img
           src={heroCover.url}
           alt=""
