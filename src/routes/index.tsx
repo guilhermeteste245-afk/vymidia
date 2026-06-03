@@ -15,6 +15,7 @@ import internet from "@/assets/internet.asset.json";
 import churrascaria from "@/assets/churrascaria.asset.json";
 import fuscarosa from "@/assets/fuscarosa.asset.json";
 import team from "@/assets/team.asset.json";
+import juliana from "@/assets/juliana.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,8 +38,9 @@ const PORTFOLIO = [
   { src: churrascaria.url, title: "Churrascaria 100Tenário", client: "Tradição • Gastronomia", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/churrascaria100tenario/" },
   { src: fuscarosa.url, title: "Fusca Rosa", client: "Bar • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/fuskarosabeer/" },
   { src: flacidez.url, title: "Dra Ana", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/" },
-  { src: inss.url, title: "tiecherpegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
-  { src: internet.url, title: "juliolabhacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
+  { src: inss.url, title: "Tiecher Pegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
+  { src: internet.url, title: "Julio Lab Hacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
+  { src: juliana.url, title: "Juliana Aranda", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
   { src: maes.url, title: "Jardim dos Fuscas", client: "Eventos • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
 ];
 
@@ -105,7 +107,6 @@ function Index() {
             <a href="#sobre" className="hover:text-gold transition-colors">Quem Somos</a>
             <a href="#servicos" className="hover:text-gold transition-colors">Serviços</a>
             <a href="#portfolio" className="hover:text-gold transition-colors">Portfólio</a>
-            <a href="#clientes" className="hover:text-gold transition-colors">Clientes</a>
             <a href="#contato" className="hover:text-gold transition-colors">Contato</a>
           </nav>
           <a href="#contato" className="hidden md:inline-flex items-center gap-2 border border-gold/60 px-5 py-2.5 text-[10px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all">
@@ -289,32 +290,6 @@ function Index() {
         </div>
       </section>
 
-      {/* CLIENTES */}
-      <section id="clientes" className="relative py-32 md:py-40 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="text-center max-w-2xl mx-auto mb-16">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Clientes</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
-              Marcas que confiam na <span className="italic text-gradient-gold">VY</span>.
-            </h2>
-          </Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border">
-            {CLIENTES.map((c) => (
-              <a
-                key={c.name}
-                href={c.url}
-                target="_blank"
-                rel="noreferrer"
-                className="group bg-background px-6 py-8 flex items-center justify-center text-center hover:bg-card transition-colors"
-              >
-                <span className="font-display text-xl text-foreground/80 group-hover:text-gold transition-colors">
-                  {c.name}
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* DIFERENCIAIS */}
       <section className="relative py-32 md:py-40 border-t border-border">
