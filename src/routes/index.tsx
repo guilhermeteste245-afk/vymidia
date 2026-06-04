@@ -192,8 +192,8 @@ function Index() {
               <div className="absolute -inset-4 border border-gold/20 -z-10" />
               <img src={team.url} alt="Equipe VY Mídia" className="w-full object-cover aspect-[4/5]" />
               <div className="absolute -bottom-6 -right-6 glass px-6 py-4">
-                <p className="text-[10px] tracking-luxury uppercase text-gold">Desde 2022</p>
-                <p className="font-display text-xl mt-1">Content Creates Brand</p>
+                <p className="text-[10px] tracking-luxury uppercase text-gold">Desde 2023</p>
+                <p className="font-display text-xl mt-1">O conteúdo cria a marca</p>
               </div>
             </div>
           </Reveal>
