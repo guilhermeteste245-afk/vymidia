@@ -129,13 +129,13 @@ function Index() {
       {/* HERO — Cover image */}
       <section
         id="top"
-        className="relative w-full overflow-hidden bg-black flex items-center justify-center h-screen min-h-[560px]"
+        className="relative w-full overflow-hidden bg-black flex items-center justify-center min-h-[100svh] md:h-screen md:min-h-[560px]"
       >
-        {/* Mobile: dedicated vertical artwork, full-bleed cover */}
+        {/* Mobile: vertical artwork, fully visible (no crop) */}
         <img
           src={heroMobile.url}
           alt="VY Mídia — Portfólio"
-          className="md:hidden absolute inset-0 h-full w-full object-cover object-center select-none"
+          className="md:hidden block max-h-[calc(100svh-72px)] max-w-full w-auto h-auto object-contain select-none mt-[72px]"
           draggable={false}
         />
         {/* Desktop / tablet: horizontal cover, full image visible */}
