@@ -120,7 +120,7 @@ function Index() {
             <a href="#portfolio" className="hover:text-gold transition-colors">Portfólio</a>
             <a href="#contato" className="hover:text-gold transition-colors">Contato</a>
           </nav>
-          <a href="#contato" className="hidden md:inline-flex items-center gap-2 border border-gold/60 px-5 py-2.5 text-[10px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all">
+          <a href="https://wa.me/5548998206769" target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 border border-gold/60 px-5 py-2.5 text-[10px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all">
             Orçamento
           </a>
         </div>
