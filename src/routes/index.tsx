@@ -26,6 +26,7 @@ import internetPoster from "@/assets/internet-poster.asset.json";
 import churrascariaPoster from "@/assets/churrascaria-poster.asset.json";
 import fuscarosaPoster from "@/assets/fuscarosa-poster.asset.json";
 import julianaPoster from "@/assets/juliana-poster.asset.json";
+import vyLogo from "@/assets/vy-logo.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
