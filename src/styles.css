@@ -35,8 +35,8 @@
   --color-gold-soft: var(--gold-soft);
   --color-metal: var(--metal);
 
-  --font-display: "Cormorant Garamond", serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
