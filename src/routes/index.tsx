@@ -120,7 +120,7 @@ function Index() {
             <a href="#portfolio" className="hover:text-gold transition-colors">Portfólio</a>
             <a href="#contato" className="hover:text-gold transition-colors">Contato</a>
           </nav>
-          <a href="#contato" className="hidden md:inline-flex items-center gap-2 border border-gold/60 px-5 py-2.5 text-[10px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all">
+          <a href="https://wa.me/5548998206769" target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 border border-gold/60 px-5 py-2.5 text-[10px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all">
             Orçamento
           </a>
         </div>
@@ -129,13 +129,13 @@ function Index() {
       {/* HERO — Cover image */}
       <section
         id="top"
-        className="relative w-full overflow-hidden bg-black flex items-center justify-center h-screen min-h-[560px]"
+        className="relative w-full overflow-hidden bg-black flex items-center justify-center min-h-[100svh] md:h-screen md:min-h-[560px]"
       >
-        {/* Mobile: dedicated vertical artwork, full-bleed cover */}
+        {/* Mobile: vertical artwork, fully visible (no crop) */}
         <img
           src={heroMobile.url}
           alt="VY Mídia — Portfólio"
-          className="md:hidden absolute inset-0 h-full w-full object-cover object-center select-none"
+          className="md:hidden block max-h-[calc(100svh-72px)] max-w-full w-auto h-auto object-contain select-none mt-[72px]"
           draggable={false}
         />
         {/* Desktop / tablet: horizontal cover, full image visible */}
@@ -174,11 +174,11 @@ function Index() {
                 Unimos criatividade, storytelling e estratégia para criar conteúdos que destacam o que torna cada negócio único.
               </p>
             </div>
-            <div className="mt-12 grid grid-cols-3 gap-8 max-w-md">
+            <div className="mt-12 grid grid-cols-3 gap-6 max-w-xl">
               {[
-                { n: "+50", l: "Projetos" },
-                { n: "+15", l: "Clientes" },
-                { n: "100%", l: "Dedicação" },
+                { n: "4+", l: "Anos de experiência" },
+                { n: "400+", l: "Projetos entregues em 2025" },
+                { n: "200+", l: "Horas em Campo em 2025" },
               ].map((s) => (
                 <div key={s.l}>
                   <p className="font-display text-4xl text-gold">{s.n}</p>
@@ -192,8 +192,8 @@ function Index() {
               <div className="absolute -inset-4 border border-gold/20 -z-10" />
               <img src={team.url} alt="Equipe VY Mídia" className="w-full object-cover aspect-[4/5]" />
               <div className="absolute -bottom-6 -right-6 glass px-6 py-4">
-                <p className="text-[10px] tracking-luxury uppercase text-gold">Desde 2022</p>
-                <p className="font-display text-xl mt-1">Content Creates Brand</p>
+                <p className="text-[10px] tracking-luxury uppercase text-gold">Desde 2023</p>
+                <p className="font-display text-xl mt-1">O conteúdo cria a marca</p>
               </div>
             </div>
           </Reveal>
@@ -333,7 +333,7 @@ function Index() {
               <p className="text-gold">Mais resultado.</p>
             </div>
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5548998206769"
               target="_blank"
               rel="noreferrer"
               className="group mt-14 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[11px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all"
@@ -356,7 +356,7 @@ function Index() {
             <div className="flex items-center gap-5">
               {[
                 { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                { icon: MessageCircle, href: "https://wa.me/5500000000000", label: "WhatsApp" },
+                { icon: MessageCircle, href: "https://wa.me/5548998206769", label: "WhatsApp" },
                 { icon: Mail, href: "mailto:contato@vymidia.com", label: "Email" },
               ].map(({ icon: Icon, href, label }) => (
                 <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label}
