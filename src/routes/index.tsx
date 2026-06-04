@@ -111,7 +111,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 glass">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:py-3.5">
           <a href="#top" className="flex items-center gap-3">
-            <span className="font-display text-2xl tracking-tight text-foreground">V<span className="text-gold">Y</span></span>
+            <img src={vyLogo.url} alt="VY Mídia" className="h-9 md:h-10 w-auto select-none" draggable={false} />
             <span className="hidden sm:inline text-[10px] tracking-luxury text-muted-foreground uppercase">Mídia</span>
           </a>
           <nav className="hidden md:flex items-center gap-10 text-[11px] tracking-editorial uppercase text-muted-foreground">
