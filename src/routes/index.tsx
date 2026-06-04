@@ -174,7 +174,7 @@ function Index() {
                 Unimos criatividade, storytelling e estratégia para criar conteúdos que destacam o que torna cada negócio único.
               </p>
             </div>
-            <div className="mt-12 grid grid-cols-3 gap-8 max-w-md">
+            <div className="mt-12 grid grid-cols-3 gap-6 max-w-xl">
               {[
                 { n: "4+", l: "Anos de experiência" },
                 { n: "400+", l: "Projetos entregues em 2025" },
