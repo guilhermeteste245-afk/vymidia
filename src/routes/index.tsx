@@ -26,6 +26,7 @@ import internetPoster from "@/assets/internet-poster.asset.json";
 import churrascariaPoster from "@/assets/churrascaria-poster.asset.json";
 import fuscarosaPoster from "@/assets/fuscarosa-poster.asset.json";
 import julianaPoster from "@/assets/juliana-poster.asset.json";
+import vyLogo from "@/assets/vy-logo.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -110,7 +111,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 glass">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:py-3.5">
           <a href="#top" className="flex items-center gap-3">
-            <span className="font-display text-2xl tracking-tight text-foreground">V<span className="text-gold">Y</span></span>
+            <img src={vyLogo.url} alt="VY Mídia" className="h-9 md:h-10 w-auto select-none" draggable={false} />
             <span className="hidden sm:inline text-[10px] tracking-luxury text-muted-foreground uppercase">Mídia</span>
           </a>
           <nav className="hidden md:flex items-center gap-10 text-[11px] tracking-editorial uppercase text-muted-foreground">
@@ -252,7 +253,7 @@ function Index() {
               ))}
             </div>
           </Reveal>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
             {filtered.map((v, i) => (
               <Reveal key={v.title} delay={i * 80}>
                 <VideoCard {...v} />
@@ -349,7 +350,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
             <div className="flex items-center gap-3">
-              <span className="font-display text-3xl">V<span className="text-gold">Y</span></span>
+              <img src={vyLogo.url} alt="VY Mídia" className="h-10 w-auto select-none" draggable={false} />
               <span className="text-[10px] tracking-luxury uppercase text-muted-foreground">Mídia • Estratégia Digital</span>
             </div>
             <div className="flex items-center gap-5">
