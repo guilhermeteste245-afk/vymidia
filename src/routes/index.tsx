@@ -176,9 +176,9 @@ function Index() {
             </div>
             <div className="mt-12 grid grid-cols-3 gap-8 max-w-md">
               {[
-                { n: "+50", l: "Projetos" },
-                { n: "+15", l: "Clientes" },
-                { n: "100%", l: "Dedicação" },
+                { n: "4+", l: "Anos de experiência" },
+                { n: "400+", l: "Projetos entregues em 2025" },
+                { n: "200+", l: "Horas em Campo em 2025" },
               ].map((s) => (
                 <div key={s.l}>
                   <p className="font-display text-4xl text-gold">{s.n}</p>
