@@ -333,7 +333,7 @@ function Index() {
               <p className="text-gold">Mais resultado.</p>
             </div>
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5548998206769"
               target="_blank"
               rel="noreferrer"
               className="group mt-14 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[11px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all"
@@ -356,7 +356,7 @@ function Index() {
             <div className="flex items-center gap-5">
               {[
                 { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                { icon: MessageCircle, href: "https://wa.me/5500000000000", label: "WhatsApp" },
+                { icon: MessageCircle, href: "https://wa.me/5548998206769", label: "WhatsApp" },
                 { icon: Mail, href: "mailto:contato@vymidia.com", label: "Email" },
               ].map(({ icon: Icon, href, label }) => (
                 <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label}
