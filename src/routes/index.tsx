@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Camera, Film, Share2, Sparkles, Globe, Video,
-  Instagram, MessageCircle, Mail, ArrowRight, Target, Compass, Trophy,
+  Instagram, MessageCircle, Mail, ArrowRight, Target, Compass, Trophy, Menu, X,
 } from "lucide-react";
 import { VideoCard } from "@/components/VideoCard";
 import { Reveal } from "@/components/Reveal";
@@ -44,6 +44,15 @@ export const Route = createFileRoute("/")({
 const CATEGORIES = ["Todos", "Restaurantes", "Empresas", "Imobiliário", "Marcas Pessoais", "Eventos"] as const;
 type Cat = typeof CATEGORIES[number];
 
+const WHATSAPP_BUDGET_LINK = "https://wa.me/5548998206769?text=Olá!%20Conheci%20a%20VY%20Mídia%20através%20do%20site%20e%20gostaria%20de%20receber%20um%20orçamento%20para%20o%20meu%20negócio.";
+
+const MOBILE_NAV_ITEMS = [
+  { label: "Início", href: "#top" },
+  { label: "Portfólio", href: "#portfolio" },
+  { label: "Orçamento", href: WHATSAPP_BUDGET_LINK, external: true },
+  { label: "Contato", href: "#contato" },
+];
+
 const PORTFOLIO = [
   { src: manos.url, poster: manosPoster.url, title: "Mano's Gastrobar", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
   { src: churrascaria.url, poster: churrascariaPoster.url, title: "Churrascaria 100Tenário", client: "Tradição • Gastronomia", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/churrascaria100tenario/" },
@@ -52,7 +61,7 @@ const PORTFOLIO = [
   { src: inss.url, poster: inssPoster.url, title: "Tiecher Pegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
   { src: internet.url, poster: internetPoster.url, title: "Julio Lab Hacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
   { src: juliana.url, poster: julianaPoster.url, title: "Juliana Aranda", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
-  { src: maes.url, poster: maesPoster.url, title: "Jardim dos Fuscas", client: "Eventos • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
+  { src: maes.url, poster: maesPoster.url, title: "Jardim dos Fuscas", client: "Restaurante", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
 ];
 
 const CLIENTES = [
@@ -100,15 +109,21 @@ const DEPOIMENTOS = [
 
 function Index() {
   const [filter, setFilter] = useState<Cat>("Todos");
+  const [menuOpen, setMenuOpen] = useState(false);
   const filtered = useMemo(
     () => filter === "Todos" ? PORTFOLIO : PORTFOLIO.filter((v) => v.category === filter),
     [filter]
   );
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 glass">
+      <header className="fixed top-0 inset-x-0 z-[120] border-b border-gold/20 bg-background/95 backdrop-blur-xl shadow-[0_2px_30px_rgba(0,0,0,0.45)]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:py-3.5">
           <a href="#top" className="flex items-center gap-3">
             <img src={vyLogo.url} alt="VY Mídia" className="h-9 md:h-10 w-auto select-none" draggable={false} />
@@ -118,12 +133,42 @@ function Index() {
             <a href="#sobre" className="hover:text-gold transition-colors">Quem Somos</a>
             <a href="#servicos" className="hover:text-gold transition-colors">Serviços</a>
             <a href="#portfolio" className="hover:text-gold transition-colors">Portfólio</a>
-            <a href="#contato" className="hover:text-gold transition-colors">Contato</a>
           </nav>
-          <a href="https://wa.me/5548998206769" target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 border border-gold/60 px-5 py-2.5 text-[10px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all">
+          <a href={WHATSAPP_BUDGET_LINK} target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 border border-gold/60 px-5 py-2.5 text-[10px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all">
             Orçamento
           </a>
+          <button
+            type="button"
+            onClick={() => setMenuOpen((open) => !open)}
+            className="md:hidden inline-flex h-11 w-11 items-center justify-center border border-gold/50 text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+          >
+            {menuOpen ? <X className="h-5 w-5" strokeWidth={1.5} /> : <Menu className="h-5 w-5" strokeWidth={1.5} />}
+          </button>
         </div>
+        <nav
+          id="mobile-navigation"
+          className={`fixed left-0 right-0 top-[68px] z-[130] md:hidden w-screen border-y border-gold/20 bg-background/98 backdrop-blur-xl transition-all duration-300 ${
+            menuOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-3 opacity-0"
+          }`}
+        >
+          <div className="flex min-h-[calc(100svh-68px)] w-full flex-col items-center justify-center gap-8 px-6 py-12 text-center">
+            {MOBILE_NAV_ITEMS.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noreferrer" : undefined}
+                onClick={() => setMenuOpen(false)}
+                className="w-full max-w-xs border-b border-gold/15 pb-5 text-[12px] uppercase tracking-luxury text-foreground transition-colors hover:text-gold"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </nav>
       </header>
 
       {/* HERO — Cover image */}
@@ -333,7 +378,7 @@ function Index() {
               <p className="text-gold">Mais resultado.</p>
             </div>
             <a
-              href="https://wa.me/5548998206769"
+              href={WHATSAPP_BUDGET_LINK}
               target="_blank"
               rel="noreferrer"
               className="group mt-14 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[11px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all"
