@@ -378,7 +378,7 @@ function Index() {
               <p className="text-gold">Mais resultado.</p>
             </div>
             <a
-              href="https://wa.me/5548998206769"
+              href={WHATSAPP_BUDGET_LINK}
               target="_blank"
               rel="noreferrer"
               className="group mt-14 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[11px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all"
