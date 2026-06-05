@@ -148,13 +148,29 @@ function Index() {
             {menuOpen ? <X className="h-5 w-5" strokeWidth={1.5} /> : <Menu className="h-5 w-5" strokeWidth={1.5} />}
           </button>
         </div>
+        <div className="grid grid-cols-2 border-t border-gold/15 md:hidden">
+          <a
+            href="#portfolio"
+            className="flex min-h-12 items-center justify-center border-r border-gold/15 px-3 text-center text-[10px] uppercase tracking-editorial text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
+          >
+            Portfólio
+          </a>
+          <a
+            href={WHATSAPP_BUDGET_LINK}
+            target="_blank"
+            rel="noreferrer"
+            className="flex min-h-12 items-center justify-center px-3 text-center text-[10px] uppercase tracking-editorial text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
+          >
+            Orçamento
+          </a>
+        </div>
         <nav
           id="mobile-navigation"
-          className={`fixed left-0 right-0 top-[68px] z-[130] md:hidden w-screen border-y border-gold/20 bg-background/98 backdrop-blur-xl transition-all duration-300 ${
+          className={`fixed left-0 right-0 top-[117px] z-[130] md:hidden w-screen border-y border-gold/20 bg-background/98 backdrop-blur-xl transition-all duration-300 ${
             menuOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-3 opacity-0"
           }`}
         >
-          <div className="flex min-h-[calc(100svh-68px)] w-full flex-col items-center justify-center gap-8 px-6 py-12 text-center">
+          <div className="flex min-h-[calc(100svh-117px)] w-full flex-col items-center justify-center gap-8 px-6 py-12 text-center">
             {MOBILE_NAV_ITEMS.map((item) => (
               <a
                 key={item.label}
@@ -180,7 +196,7 @@ function Index() {
         <img
           src={heroMobile.url}
           alt="VY Mídia — Portfólio"
-          className="md:hidden block max-h-[calc(100svh-72px)] max-w-full w-auto h-auto object-contain select-none mt-[72px]"
+          className="md:hidden block max-h-[calc(100svh-118px)] max-w-full w-auto h-auto object-contain select-none mt-[118px]"
           draggable={false}
         />
         {/* Desktop / tablet: horizontal cover, full image visible */}
