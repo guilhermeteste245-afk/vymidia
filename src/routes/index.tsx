@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Camera, Film, Share2, Sparkles, Globe, Video,
-  Instagram, MessageCircle, Mail, ArrowRight, Target, Compass, Trophy,
+  Instagram, MessageCircle, Mail, ArrowRight, Target, Compass, Trophy, Menu, X,
 } from "lucide-react";
 import { VideoCard } from "@/components/VideoCard";
 import { Reveal } from "@/components/Reveal";
@@ -44,6 +44,15 @@ export const Route = createFileRoute("/")({
 const CATEGORIES = ["Todos", "Restaurantes", "Empresas", "Imobiliário", "Marcas Pessoais", "Eventos"] as const;
 type Cat = typeof CATEGORIES[number];
 
+const WHATSAPP_BUDGET_LINK = "https://wa.me/5548998206769?text=Olá!%20Conheci%20a%20VY%20Mídia%20através%20do%20site%20e%20gostaria%20de%20receber%20um%20orçamento%20para%20o%20meu%20negócio.";
+
+const MOBILE_NAV_ITEMS = [
+  { label: "Início", href: "#top" },
+  { label: "Portfólio", href: "#portfolio" },
+  { label: "Orçamento", href: WHATSAPP_BUDGET_LINK, external: true },
+  { label: "Contato", href: "#contato" },
+];
+
 const PORTFOLIO = [
   { src: manos.url, poster: manosPoster.url, title: "Mano's Gastrobar", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
   { src: churrascaria.url, poster: churrascariaPoster.url, title: "Churrascaria 100Tenário", client: "Tradição • Gastronomia", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/churrascaria100tenario/" },
@@ -52,7 +61,7 @@ const PORTFOLIO = [
   { src: inss.url, poster: inssPoster.url, title: "Tiecher Pegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
   { src: internet.url, poster: internetPoster.url, title: "Julio Lab Hacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
   { src: juliana.url, poster: julianaPoster.url, title: "Juliana Aranda", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
-  { src: maes.url, poster: maesPoster.url, title: "Jardim dos Fuscas", client: "Eventos • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
+  { src: maes.url, poster: maesPoster.url, title: "Jardim dos Fuscas", client: "Restaurante", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
 ];
 
 const CLIENTES = [
@@ -100,10 +109,16 @@ const DEPOIMENTOS = [
 
 function Index() {
   const [filter, setFilter] = useState<Cat>("Todos");
+  const [menuOpen, setMenuOpen] = useState(false);
   const filtered = useMemo(
     () => filter === "Todos" ? PORTFOLIO : PORTFOLIO.filter((v) => v.category === filter),
     [filter]
   );
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
