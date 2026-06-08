@@ -54,12 +54,6 @@ type Cat = typeof CATEGORIES[number];
 
 const WHATSAPP_BUDGET_LINK = "https://wa.me/5548998206769?text=Olá!%20Conheci%20a%20VY%20Mídia%20através%20do%20site%20e%20gostaria%20de%20receber%20um%20orçamento%20para%20o%20meu%20negócio.";
 
-const MOBILE_NAV_ITEMS = [
-  { label: "Início", href: "#top" },
-  { label: "Portfólio", href: "#portfolio" },
-  { label: "Orçamento", href: WHATSAPP_BUDGET_LINK, external: true },
-  { label: "Contato", href: "#contato" },
-];
 
 const PORTFOLIO = [
   { src: manos.url, poster: manosPoster.url, title: "Mano's Gastrobar", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
