@@ -115,16 +115,11 @@ const DEPOIMENTOS = [
 
 function Index() {
   const [filter, setFilter] = useState<Cat>("Todos");
-  const [menuOpen, setMenuOpen] = useState(false);
   const filtered = useMemo(
     () => filter === "Todos" ? PORTFOLIO : PORTFOLIO.filter((v) => v.category === filter),
     [filter]
   );
 
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [menuOpen]);
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
