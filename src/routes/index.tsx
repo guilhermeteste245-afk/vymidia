@@ -27,6 +27,14 @@ import churrascariaPoster from "@/assets/churrascaria-poster.asset.json";
 import fuscarosaPoster from "@/assets/fuscarosa-poster.asset.json";
 import julianaPoster from "@/assets/juliana-poster.asset.json";
 import vyLogo from "@/assets/vy-logo.asset.json";
+import villaRomane from "@/assets/villa-romane.asset.json";
+import villaPoster from "@/assets/villa-poster.asset.json";
+import manosSabado from "@/assets/manos-sabado.asset.json";
+import manosSabadoPoster from "@/assets/manos-sabado-poster.asset.json";
+import julianaDeclarar from "@/assets/juliana-declarar.asset.json";
+import julianaDeclararPoster from "@/assets/juliana-declarar-poster.asset.json";
+import draanaPreench from "@/assets/draana-preench.asset.json";
+import draanaPreenchPoster from "@/assets/draana-preench-poster.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
