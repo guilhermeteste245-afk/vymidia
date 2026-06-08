@@ -134,69 +134,30 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* NAV */}
+      {/* NAV — single fixed bar */}
       <header className="fixed top-0 inset-x-0 z-[120] border-b border-gold/20 bg-background/95 backdrop-blur-xl shadow-[0_2px_30px_rgba(0,0,0,0.45)]">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:py-3.5">
-          <a href="#top" className="flex items-center gap-3">
-            <img src={vyLogo.url} alt="VY Mídia" className="h-9 md:h-10 w-auto select-none" draggable={false} />
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 md:px-6 md:py-3.5">
+          <a href="#top" className="flex items-center gap-3 shrink-0">
+            <img src={vyLogo.url} alt="VY Mídia" className="h-8 md:h-10 w-auto select-none" draggable={false} />
             <span className="hidden sm:inline text-[10px] tracking-luxury text-muted-foreground uppercase">Mídia</span>
           </a>
-          <nav className="hidden md:flex items-center gap-10 text-[11px] tracking-editorial uppercase text-muted-foreground">
-            <a href="#sobre" className="hover:text-gold transition-colors">Quem Somos</a>
-            <a href="#servicos" className="hover:text-gold transition-colors">Serviços</a>
-            <a href="#portfolio" className="hover:text-gold transition-colors">Portfólio</a>
+          <nav className="flex items-center gap-2 sm:gap-4 md:gap-6">
+            <a
+              href="#portfolio"
+              className="text-[10px] sm:text-[11px] tracking-luxury uppercase text-gold hover:text-foreground transition-colors px-2 sm:px-3 py-2"
+            >
+              Portfólio
+            </a>
+            <a
+              href={WHATSAPP_BUDGET_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 border border-gold/60 px-3 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-[11px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all"
+            >
+              Orçamento
+            </a>
           </nav>
-          <a href={WHATSAPP_BUDGET_LINK} target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 border border-gold/60 px-5 py-2.5 text-[10px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all">
-            Orçamento
-          </a>
-          <button
-            type="button"
-            onClick={() => setMenuOpen((open) => !open)}
-            className="md:hidden inline-flex h-11 w-11 items-center justify-center border border-gold/50 text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
-            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-navigation"
-          >
-            {menuOpen ? <X className="h-5 w-5" strokeWidth={1.5} /> : <Menu className="h-5 w-5" strokeWidth={1.5} />}
-          </button>
         </div>
-        <div className="grid grid-cols-2 border-t border-gold/15 md:hidden">
-          <a
-            href="#portfolio"
-            className="flex min-h-12 items-center justify-center border-r border-gold/15 px-3 text-center text-[10px] uppercase tracking-editorial text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
-          >
-            Portfólio
-          </a>
-          <a
-            href={WHATSAPP_BUDGET_LINK}
-            target="_blank"
-            rel="noreferrer"
-            className="flex min-h-12 items-center justify-center px-3 text-center text-[10px] uppercase tracking-editorial text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
-          >
-            Orçamento
-          </a>
-        </div>
-        <nav
-          id="mobile-navigation"
-          className={`fixed left-0 right-0 top-[117px] z-[130] md:hidden w-screen border-y border-gold/20 bg-background/98 backdrop-blur-xl transition-all duration-300 ${
-            menuOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-3 opacity-0"
-          }`}
-        >
-          <div className="flex min-h-[calc(100svh-117px)] w-full flex-col items-center justify-center gap-8 px-6 py-12 text-center">
-            {MOBILE_NAV_ITEMS.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noreferrer" : undefined}
-                onClick={() => setMenuOpen(false)}
-                className="w-full max-w-xs border-b border-gold/15 pb-5 text-[12px] uppercase tracking-luxury text-foreground transition-colors hover:text-gold"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-        </nav>
       </header>
 
       {/* HERO — Cover image */}
