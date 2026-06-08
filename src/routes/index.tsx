@@ -158,7 +158,7 @@ function Index() {
         <img
           src={heroMobile.url}
           alt="VY Mídia — Portfólio"
-          className="md:hidden block max-h-[calc(100svh-118px)] max-w-full w-auto h-auto object-contain select-none mt-[118px]"
+          className="md:hidden block max-h-[calc(100svh-72px)] max-w-full w-auto h-auto object-contain select-none mt-[72px]"
           draggable={false}
         />
         {/* Desktop / tablet: horizontal cover, full image visible */}
