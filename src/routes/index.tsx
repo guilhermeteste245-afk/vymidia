@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Camera, Film, Share2, Sparkles, Globe, Video,
-  Instagram, MessageCircle, Mail, ArrowRight, Target, Compass, Trophy, Menu, X,
+  Instagram, MessageCircle, Mail, ArrowRight, Target, Compass, Trophy,
 } from "lucide-react";
 import { VideoCard } from "@/components/VideoCard";
 import { Reveal } from "@/components/Reveal";
@@ -27,6 +27,14 @@ import churrascariaPoster from "@/assets/churrascaria-poster.asset.json";
 import fuscarosaPoster from "@/assets/fuscarosa-poster.asset.json";
 import julianaPoster from "@/assets/juliana-poster.asset.json";
 import vyLogo from "@/assets/vy-logo.asset.json";
+import villaRomane from "@/assets/villa-romane.asset.json";
+import villaPoster from "@/assets/villa-poster.asset.json";
+import manosSabado from "@/assets/manos-sabado.asset.json";
+import manosSabadoPoster from "@/assets/manos-sabado-poster.asset.json";
+import julianaDeclarar from "@/assets/juliana-declarar.asset.json";
+import julianaDeclararPoster from "@/assets/juliana-declarar-poster.asset.json";
+import draanaPreench from "@/assets/draana-preench.asset.json";
+import draanaPreenchPoster from "@/assets/draana-preench-poster.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,12 +54,6 @@ type Cat = typeof CATEGORIES[number];
 
 const WHATSAPP_BUDGET_LINK = "https://wa.me/5548998206769?text=Olá!%20Conheci%20a%20VY%20Mídia%20através%20do%20site%20e%20gostaria%20de%20receber%20um%20orçamento%20para%20o%20meu%20negócio.";
 
-const MOBILE_NAV_ITEMS = [
-  { label: "Início", href: "#top" },
-  { label: "Portfólio", href: "#portfolio" },
-  { label: "Orçamento", href: WHATSAPP_BUDGET_LINK, external: true },
-  { label: "Contato", href: "#contato" },
-];
 
 const PORTFOLIO = [
   { src: manos.url, poster: manosPoster.url, title: "Mano's Gastrobar", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
@@ -62,6 +64,10 @@ const PORTFOLIO = [
   { src: internet.url, poster: internetPoster.url, title: "Julio Lab Hacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
   { src: juliana.url, poster: julianaPoster.url, title: "Juliana Aranda", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
   { src: maes.url, poster: maesPoster.url, title: "Jardim dos Fuscas", client: "Restaurante", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
+  { src: villaRomane.url, poster: villaPoster.url, title: "Villa Romane", client: "Imobiliário • Alto Padrão", category: "Imobiliário" as Cat, instagram: "https://www.instagram.com/ibagy/" },
+  { src: manosSabado.url, poster: manosSabadoPoster.url, title: "Mano's — Sábado", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/" },
+  { src: julianaDeclarar.url, poster: julianaDeclararPoster.url, title: "Juliana Aranda — IR", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
+  { src: draanaPreench.url, poster: draanaPreenchPoster.url, title: "Dra Ana — Preenchimento", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/" },
 ];
 
 const CLIENTES = [
@@ -109,82 +115,38 @@ const DEPOIMENTOS = [
 
 function Index() {
   const [filter, setFilter] = useState<Cat>("Todos");
-  const [menuOpen, setMenuOpen] = useState(false);
   const filtered = useMemo(
     () => filter === "Todos" ? PORTFOLIO : PORTFOLIO.filter((v) => v.category === filter),
     [filter]
   );
 
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [menuOpen]);
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* NAV */}
+      {/* NAV — single fixed bar */}
       <header className="fixed top-0 inset-x-0 z-[120] border-b border-gold/20 bg-background/95 backdrop-blur-xl shadow-[0_2px_30px_rgba(0,0,0,0.45)]">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:py-3.5">
-          <a href="#top" className="flex items-center gap-3">
-            <img src={vyLogo.url} alt="VY Mídia" className="h-9 md:h-10 w-auto select-none" draggable={false} />
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 md:px-6 md:py-3.5">
+          <a href="#top" className="flex items-center gap-3 shrink-0">
+            <img src={vyLogo.url} alt="VY Mídia" className="h-8 md:h-10 w-auto select-none" draggable={false} />
             <span className="hidden sm:inline text-[10px] tracking-luxury text-muted-foreground uppercase">Mídia</span>
           </a>
-          <nav className="hidden md:flex items-center gap-10 text-[11px] tracking-editorial uppercase text-muted-foreground">
-            <a href="#sobre" className="hover:text-gold transition-colors">Quem Somos</a>
-            <a href="#servicos" className="hover:text-gold transition-colors">Serviços</a>
-            <a href="#portfolio" className="hover:text-gold transition-colors">Portfólio</a>
+          <nav className="flex items-center gap-2 sm:gap-4 md:gap-6">
+            <a
+              href="#portfolio"
+              className="text-[10px] sm:text-[11px] tracking-luxury uppercase text-gold hover:text-foreground transition-colors px-2 sm:px-3 py-2"
+            >
+              Portfólio
+            </a>
+            <a
+              href={WHATSAPP_BUDGET_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 border border-gold/60 px-3 sm:px-5 py-2 sm:py-2.5 text-[10px] sm:text-[11px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all"
+            >
+              Orçamento
+            </a>
           </nav>
-          <a href={WHATSAPP_BUDGET_LINK} target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 border border-gold/60 px-5 py-2.5 text-[10px] tracking-luxury uppercase text-gold hover:bg-gold hover:text-primary-foreground transition-all">
-            Orçamento
-          </a>
-          <button
-            type="button"
-            onClick={() => setMenuOpen((open) => !open)}
-            className="md:hidden inline-flex h-11 w-11 items-center justify-center border border-gold/50 text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
-            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-navigation"
-          >
-            {menuOpen ? <X className="h-5 w-5" strokeWidth={1.5} /> : <Menu className="h-5 w-5" strokeWidth={1.5} />}
-          </button>
         </div>
-        <div className="grid grid-cols-2 border-t border-gold/15 md:hidden">
-          <a
-            href="#portfolio"
-            className="flex min-h-12 items-center justify-center border-r border-gold/15 px-3 text-center text-[10px] uppercase tracking-editorial text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
-          >
-            Portfólio
-          </a>
-          <a
-            href={WHATSAPP_BUDGET_LINK}
-            target="_blank"
-            rel="noreferrer"
-            className="flex min-h-12 items-center justify-center px-3 text-center text-[10px] uppercase tracking-editorial text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
-          >
-            Orçamento
-          </a>
-        </div>
-        <nav
-          id="mobile-navigation"
-          className={`fixed left-0 right-0 top-[117px] z-[130] md:hidden w-screen border-y border-gold/20 bg-background/98 backdrop-blur-xl transition-all duration-300 ${
-            menuOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-3 opacity-0"
-          }`}
-        >
-          <div className="flex min-h-[calc(100svh-117px)] w-full flex-col items-center justify-center gap-8 px-6 py-12 text-center">
-            {MOBILE_NAV_ITEMS.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noreferrer" : undefined}
-                onClick={() => setMenuOpen(false)}
-                className="w-full max-w-xs border-b border-gold/15 pb-5 text-[12px] uppercase tracking-luxury text-foreground transition-colors hover:text-gold"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-        </nav>
       </header>
 
       {/* HERO — Cover image */}
@@ -196,7 +158,7 @@ function Index() {
         <img
           src={heroMobile.url}
           alt="VY Mídia — Portfólio"
-          className="md:hidden block max-h-[calc(100svh-118px)] max-w-full w-auto h-auto object-contain select-none mt-[118px]"
+          className="md:hidden block max-h-[calc(100svh-72px)] max-w-full w-auto h-auto object-contain select-none mt-[72px]"
           draggable={false}
         />
         {/* Desktop / tablet: horizontal cover, full image visible */}
