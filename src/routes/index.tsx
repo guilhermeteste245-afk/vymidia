@@ -65,9 +65,9 @@ const PORTFOLIO = [
   { src: juliana.url, poster: julianaPoster.url, title: "Juliana Aranda", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
   { src: maes.url, poster: maesPoster.url, title: "Jardim dos Fuscas", client: "Restaurante", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
   { src: villaRomane.url, poster: villaPoster.url, title: "Villa Romane", client: "Imobiliário • Alto Padrão", category: "Imobiliário" as Cat, instagram: "https://www.instagram.com/ibagy/" },
-  { src: manosSabado.url, poster: manosSabadoPoster.url, title: "Mano's — Sábado", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/" },
-  { src: julianaDeclarar.url, poster: julianaDeclararPoster.url, title: "Juliana Aranda — IR", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
-  { src: draanaPreench.url, poster: draanaPreenchPoster.url, title: "Dra Ana — Preenchimento", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/" },
+  { src: manosSabado.url, poster: manosSabadoPoster.url, title: "Mano's Gastrobar", client: "Restaurante", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
+  { src: julianaDeclarar.url, poster: julianaDeclararPoster.url, title: "Juliana Aranda", client: "Contabilidade", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/inovva.cont/reels/" },
+  { src: draanaPreench.url, poster: draanaPreenchPoster.url, title: "Dra Ana", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/reels/" },
 ];
 
 const CLIENTES = [
