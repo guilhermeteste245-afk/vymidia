@@ -260,12 +260,12 @@ function Index() {
             </p>
           </Reveal>
           <Reveal>
-            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-16">
+            <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-16">
               {CATEGORIES.map((c) => (
                 <button
                   key={c}
                   onClick={() => setFilter(c)}
-                  className={`px-5 py-2.5 text-[10px] tracking-luxury uppercase border transition-all ${
+                  className={`px-4 py-3 md:px-6 md:py-3 text-[10px] md:text-[11px] tracking-luxury uppercase border transition-all min-w-[90px] ${
                     filter === c
                       ? "border-gold bg-gold text-primary-foreground"
                       : "border-border text-muted-foreground hover:border-gold hover:text-gold"
