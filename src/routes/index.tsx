@@ -206,13 +206,16 @@ function Index() {
             </h2>
             <div className="space-y-6 text-base font-light text-muted-foreground leading-relaxed">
               <p>
-                A VY Mídia nasceu para transformar ideias em conteúdos que geram impacto. Produzimos vídeos estratégicos
-                para empresas, marcas e profissionais que desejam fortalecer sua presença digital através de imagens de alta qualidade.
+                A VY Mídia é uma agência completa de marketing digital. Unimos Estratégia Digital, Produção de Conteúdo,
+                Gestão de Redes Sociais e Gestão de Tráfego Pago (Meta Ads e Google Ads) para fortalecer a presença
+                digital de marcas, empresas e profissionais que buscam autoridade e resultado.
               </p>
               <p>
-                Unimos criatividade, storytelling e estratégia para criar conteúdos que destacam o que torna cada negócio único.
+                Criatividade, storytelling, performance e dados caminham juntos — criamos conteúdos que destacam o que
+                torna cada negócio único e campanhas que entregam crescimento mensurável.
               </p>
             </div>
+
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-xl">
               {[
                 { n: "4+", l: "Anos de experiência" },
