@@ -7,6 +7,9 @@ import {
 import { VideoCard } from "@/components/VideoCard";
 import { Reveal } from "@/components/Reveal";
 import ibagyLogo from "@/assets/ibagy-logo.asset.json";
+import sebraeLogo from "@/assets/sebrae-logo.asset.json";
+import nsctvLogo from "@/assets/nsctv-logo.asset.json";
+import manosLogo from "@/assets/manos-logo.asset.json";
 
 
 import manos from "@/assets/manos.asset.json";
