@@ -98,10 +98,22 @@ const SERVICES = [
   { icon: Camera, title: "Produção de Conteúdo", desc: "Conteúdo estratégico que conecta marca e audiência com propósito." },
   { icon: Video, title: "Captação Profissional", desc: "Equipamento de alto padrão e direção visual para cada cena." },
   { icon: Film, title: "Edição de Vídeos", desc: "Edição cinematográfica com ritmo, narrativa e identidade visual." },
-  { icon: Share2, title: "Social Media", desc: "Gestão de presença digital com calendário editorial sob medida." },
+  { icon: Share2, title: "Gestão de Redes Sociais", desc: "Gestão de presença digital com calendário editorial sob medida." },
+  {
+    icon: TrendingUp,
+    title: "Gestão de Tráfego Pago",
+    desc: "Meta Ads e Google Ads com estratégia de campanhas, geração de leads, conversão, remarketing e otimização contínua. Dashboard em tempo real e relatórios de desempenho conduzidos pelos especialistas Guilherme Oliveira e Eliseu Junior.",
+  },
   { icon: Sparkles, title: "Branding", desc: "Construção de marca: posicionamento, identidade e voz consistente." },
   { icon: Globe, title: "Criação de Sites", desc: "Websites premium que traduzem autoridade e geram resultado." },
 ];
+
+const CLIENTES_LOGOS: { name: string; logo?: string }[] = [
+  { name: "Faiberplas" },
+  { name: "ASTEC" },
+  { name: "Ibagy", logo: ibagyLogo.url },
+];
+
 
 const DIFERENCIAIS = [
   { icon: Target, title: "Conteúdo Estratégico", desc: "Cada peça nasce de um objetivo claro de comunicação e marca." },
