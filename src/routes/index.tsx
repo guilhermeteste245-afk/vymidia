@@ -2,10 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import {
   Camera, Film, Share2, Sparkles, Globe, Video,
-  Instagram, MessageCircle, Mail, ArrowRight, Target, Compass, Trophy,
+  Instagram, MessageCircle, Mail, ArrowRight, Target, Compass, Trophy, TrendingUp,
 } from "lucide-react";
 import { VideoCard } from "@/components/VideoCard";
 import { Reveal } from "@/components/Reveal";
+import ibagyLogo from "@/assets/ibagy-logo.asset.json";
+
 
 import manos from "@/assets/manos.asset.json";
 import maes from "@/assets/maes.asset.json";
