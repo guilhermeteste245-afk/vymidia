@@ -359,8 +359,47 @@ function Index() {
         </div>
       </section>
 
+      {/* EMPRESAS QUE CONFIAM */}
+      <section id="clientes" className="relative py-32 md:py-40 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal className="text-center max-w-2xl mx-auto mb-20">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Clientes</p>
+            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+              Empresas que confiam na <span className="italic text-gradient-gold">VY Mídia</span>.
+            </h2>
+            <p className="mt-6 text-muted-foreground font-light">
+              Marcas que escolheram a VY Mídia para fortalecer sua presença digital.
+            </p>
+          </Reveal>
+          <Reveal>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border max-w-4xl mx-auto">
+              {CLIENTES_LOGOS.map((c) => (
+                <div
+                  key={c.name}
+                  className="group bg-background flex items-center justify-center min-h-[160px] md:min-h-[180px] p-10 transition-colors hover:bg-card"
+                >
+                  {c.logo ? (
+                    <img
+                      src={c.logo}
+                      alt={c.name}
+                      className="max-h-16 md:max-h-20 w-auto object-contain opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500"
+                      draggable={false}
+                    />
+                  ) : (
+                    <span className="font-display text-2xl md:text-3xl text-muted-foreground/70 group-hover:text-gold transition-colors duration-500 tracking-wide">
+                      {c.name}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* CTA */}
       <section id="contato" className="relative py-32 md:py-48 border-t border-border overflow-hidden">
+
         <div className="absolute inset-0 hero-radial" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] aspect-square rounded-full bg-gold/10 blur-[140px]" />
         <div className="relative mx-auto max-w-4xl px-6 text-center">
