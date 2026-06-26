@@ -432,7 +432,7 @@ function Index() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
             <div className="flex items-center gap-3">
               <img src={vyLogo.url} alt="VY Mídia" className="h-10 w-auto select-none" draggable={false} />
-              <span className="text-[10px] tracking-luxury uppercase text-muted-foreground">Mídia • Estratégia Digital</span>
+              <span className="text-[10px] tracking-luxury uppercase text-muted-foreground">Estratégia • Conteúdo • Social Media • Tráfego Pago</span>
             </div>
             <div className="flex items-center gap-5">
               {[
