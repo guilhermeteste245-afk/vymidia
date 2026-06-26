@@ -41,15 +41,17 @@ import draanaPreenchPoster from "@/assets/draana-preench-poster.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VY Mídia — Portfólio" },
-      { name: "description", content: "Portfólio editorial da VY Mídia. Estratégia Digital, Produção de Conteúdo e Videomaker para marcas premium." },
-      { property: "og:title", content: "VY Mídia — Portfólio" },
-      { property: "og:description", content: "Estratégia Digital • Produção de Conteúdo • Videomaker." },
+      { title: "VY Mídia — Agência de Marketing Digital | Tráfego Pago, Conteúdo e Social Media" },
+      { name: "description", content: "Agência completa de marketing digital: Estratégia Digital, Produção de Conteúdo, Gestão de Redes Sociais e Gestão de Tráfego Pago (Meta Ads e Google Ads). Performance digital para marcas premium." },
+      { name: "keywords", content: "Gestão de Tráfego Pago, Meta Ads, Google Ads, Performance Digital, Agência de Marketing Digital, Social Media, Produção de Conteúdo, Estratégia Digital, Gestão de Redes Sociais, VY Mídia" },
+      { property: "og:title", content: "VY Mídia — Agência de Marketing Digital" },
+      { property: "og:description", content: "Estratégia Digital • Produção de Conteúdo • Gestão de Tráfego Pago (Meta Ads e Google Ads) • Social Media." },
       { property: "og:image", content: team.url },
     ],
   }),
   component: Index,
 });
+
 
 const CATEGORIES = ["Todos", "Restaurantes", "Empresas", "Imobiliário", "Marcas Pessoais", "Eventos"] as const;
 type Cat = typeof CATEGORIES[number];
