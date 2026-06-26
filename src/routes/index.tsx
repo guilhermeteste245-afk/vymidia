@@ -2,10 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import {
   Camera, Film, Share2, Sparkles, Globe, Video,
-  Instagram, MessageCircle, Mail, ArrowRight, Target, Compass, Trophy,
+  Instagram, MessageCircle, Mail, ArrowRight, Target, Compass, Trophy, TrendingUp,
 } from "lucide-react";
 import { VideoCard } from "@/components/VideoCard";
 import { Reveal } from "@/components/Reveal";
+import ibagyLogo from "@/assets/ibagy-logo.asset.json";
+
 
 import manos from "@/assets/manos.asset.json";
 import maes from "@/assets/maes.asset.json";
@@ -39,15 +41,17 @@ import draanaPreenchPoster from "@/assets/draana-preench-poster.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VY Mídia — Portfólio" },
-      { name: "description", content: "Portfólio editorial da VY Mídia. Estratégia Digital, Produção de Conteúdo e Videomaker para marcas premium." },
-      { property: "og:title", content: "VY Mídia — Portfólio" },
-      { property: "og:description", content: "Estratégia Digital • Produção de Conteúdo • Videomaker." },
+      { title: "VY Mídia — Agência de Marketing Digital | Tráfego Pago, Conteúdo e Social Media" },
+      { name: "description", content: "Agência completa de marketing digital: Estratégia Digital, Produção de Conteúdo, Gestão de Redes Sociais e Gestão de Tráfego Pago (Meta Ads e Google Ads). Performance digital para marcas premium." },
+      { name: "keywords", content: "Gestão de Tráfego Pago, Meta Ads, Google Ads, Performance Digital, Agência de Marketing Digital, Social Media, Produção de Conteúdo, Estratégia Digital, Gestão de Redes Sociais, VY Mídia" },
+      { property: "og:title", content: "VY Mídia — Agência de Marketing Digital" },
+      { property: "og:description", content: "Estratégia Digital • Produção de Conteúdo • Gestão de Tráfego Pago (Meta Ads e Google Ads) • Social Media." },
       { property: "og:image", content: team.url },
     ],
   }),
   component: Index,
 });
+
 
 const CATEGORIES = ["Todos", "Restaurantes", "Empresas", "Imobiliário", "Marcas Pessoais", "Eventos"] as const;
 type Cat = typeof CATEGORIES[number];
@@ -94,10 +98,22 @@ const SERVICES = [
   { icon: Camera, title: "Produção de Conteúdo", desc: "Conteúdo estratégico que conecta marca e audiência com propósito." },
   { icon: Video, title: "Captação Profissional", desc: "Equipamento de alto padrão e direção visual para cada cena." },
   { icon: Film, title: "Edição de Vídeos", desc: "Edição cinematográfica com ritmo, narrativa e identidade visual." },
-  { icon: Share2, title: "Social Media", desc: "Gestão de presença digital com calendário editorial sob medida." },
+  { icon: Share2, title: "Gestão de Redes Sociais", desc: "Gestão de presença digital com calendário editorial sob medida." },
+  {
+    icon: TrendingUp,
+    title: "Gestão de Tráfego Pago",
+    desc: "Meta Ads e Google Ads com estratégia de campanhas, geração de leads, conversão, remarketing e otimização contínua. Dashboard em tempo real e relatórios de desempenho conduzidos pelos especialistas Guilherme Oliveira e Eliseu Junior.",
+  },
   { icon: Sparkles, title: "Branding", desc: "Construção de marca: posicionamento, identidade e voz consistente." },
   { icon: Globe, title: "Criação de Sites", desc: "Websites premium que traduzem autoridade e geram resultado." },
 ];
+
+const CLIENTES_LOGOS: { name: string; logo?: string }[] = [
+  { name: "Faiberplas" },
+  { name: "ASTEC" },
+  { name: "Ibagy", logo: ibagyLogo.url },
+];
+
 
 const DIFERENCIAIS = [
   { icon: Target, title: "Conteúdo Estratégico", desc: "Cada peça nasce de um objetivo claro de comunicação e marca." },
@@ -190,13 +206,16 @@ function Index() {
             </h2>
             <div className="space-y-6 text-base font-light text-muted-foreground leading-relaxed">
               <p>
-                A VY Mídia nasceu para transformar ideias em conteúdos que geram impacto. Produzimos vídeos estratégicos
-                para empresas, marcas e profissionais que desejam fortalecer sua presença digital através de imagens de alta qualidade.
+                A VY Mídia é uma agência completa de marketing digital. Unimos Estratégia Digital, Produção de Conteúdo,
+                Gestão de Redes Sociais e Gestão de Tráfego Pago (Meta Ads e Google Ads) para fortalecer a presença
+                digital de marcas, empresas e profissionais que buscam autoridade e resultado.
               </p>
               <p>
-                Unimos criatividade, storytelling e estratégia para criar conteúdos que destacam o que torna cada negócio único.
+                Criatividade, storytelling, performance e dados caminham juntos — criamos conteúdos que destacam o que
+                torna cada negócio único e campanhas que entregam crescimento mensurável.
               </p>
             </div>
+
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-xl">
               {[
                 { n: "4+", l: "Anos de experiência" },
@@ -340,8 +359,47 @@ function Index() {
         </div>
       </section>
 
+      {/* EMPRESAS QUE CONFIAM */}
+      <section id="clientes" className="relative py-32 md:py-40 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal className="text-center max-w-2xl mx-auto mb-20">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Clientes</p>
+            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+              Empresas que confiam na <span className="italic text-gradient-gold">VY Mídia</span>.
+            </h2>
+            <p className="mt-6 text-muted-foreground font-light">
+              Marcas que escolheram a VY Mídia para fortalecer sua presença digital.
+            </p>
+          </Reveal>
+          <Reveal>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border max-w-4xl mx-auto">
+              {CLIENTES_LOGOS.map((c) => (
+                <div
+                  key={c.name}
+                  className="group bg-background flex items-center justify-center min-h-[160px] md:min-h-[180px] p-10 transition-colors hover:bg-card"
+                >
+                  {c.logo ? (
+                    <img
+                      src={c.logo}
+                      alt={c.name}
+                      className="max-h-16 md:max-h-20 w-auto object-contain opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500"
+                      draggable={false}
+                    />
+                  ) : (
+                    <span className="font-display text-2xl md:text-3xl text-muted-foreground/70 group-hover:text-gold transition-colors duration-500 tracking-wide">
+                      {c.name}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* CTA */}
       <section id="contato" className="relative py-32 md:py-48 border-t border-border overflow-hidden">
+
         <div className="absolute inset-0 hero-radial" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] aspect-square rounded-full bg-gold/10 blur-[140px]" />
         <div className="relative mx-auto max-w-4xl px-6 text-center">
@@ -374,7 +432,7 @@ function Index() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
             <div className="flex items-center gap-3">
               <img src={vyLogo.url} alt="VY Mídia" className="h-10 w-auto select-none" draggable={false} />
-              <span className="text-[10px] tracking-luxury uppercase text-muted-foreground">Mídia • Estratégia Digital</span>
+              <span className="text-[10px] tracking-luxury uppercase text-muted-foreground">Estratégia • Conteúdo • Social Media • Tráfego Pago</span>
             </div>
             <div className="flex items-center gap-5">
               {[
