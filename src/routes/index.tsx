@@ -7,6 +7,9 @@ import {
 import { VideoCard } from "@/components/VideoCard";
 import { Reveal } from "@/components/Reveal";
 import ibagyLogo from "@/assets/ibagy-logo.asset.json";
+import sebraeLogo from "@/assets/sebrae-logo.asset.json";
+import nsctvLogo from "@/assets/nsctv-logo.asset.json";
+import manosLogo from "@/assets/manos-logo.asset.json";
 
 
 import manos from "@/assets/manos.asset.json";
@@ -108,9 +111,10 @@ const SERVICES = [
   { icon: Globe, title: "Criação de Sites", desc: "Websites premium que traduzem autoridade e geram resultado." },
 ];
 
-const CLIENTES_LOGOS: { name: string; logo?: string }[] = [
-  { name: "Faiberplas" },
-  { name: "ASTEC" },
+const CLIENTES_LOGOS: { name: string; logo: string }[] = [
+  { name: "Sebrae", logo: sebraeLogo.url },
+  { name: "NSC TV", logo: nsctvLogo.url },
+  { name: "Mano's Gastrobar", logo: manosLogo.url },
   { name: "Ibagy", logo: ibagyLogo.url },
 ];
 
@@ -372,24 +376,18 @@ function Index() {
             </p>
           </Reveal>
           <Reveal>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border max-w-5xl mx-auto">
               {CLIENTES_LOGOS.map((c) => (
                 <div
                   key={c.name}
                   className="group bg-background flex items-center justify-center min-h-[160px] md:min-h-[180px] p-10 transition-colors hover:bg-card"
                 >
-                  {c.logo ? (
-                    <img
-                      src={c.logo}
-                      alt={c.name}
-                      className="max-h-16 md:max-h-20 w-auto object-contain opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500"
-                      draggable={false}
-                    />
-                  ) : (
-                    <span className="font-display text-2xl md:text-3xl text-muted-foreground/70 group-hover:text-gold transition-colors duration-500 tracking-wide">
-                      {c.name}
-                    </span>
-                  )}
+                  <img
+                    src={c.logo}
+                    alt={c.name}
+                    className="max-h-16 md:max-h-20 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500"
+                    draggable={false}
+                  />
                 </div>
               ))}
             </div>
