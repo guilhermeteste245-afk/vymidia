@@ -111,9 +111,10 @@ const SERVICES = [
   { icon: Globe, title: "Criação de Sites", desc: "Websites premium que traduzem autoridade e geram resultado." },
 ];
 
-const CLIENTES_LOGOS: { name: string; logo?: string }[] = [
-  { name: "Faiberplas" },
-  { name: "ASTEC" },
+const CLIENTES_LOGOS: { name: string; logo: string }[] = [
+  { name: "Sebrae", logo: sebraeLogo.url },
+  { name: "NSC TV", logo: nsctvLogo.url },
+  { name: "Mano's Gastrobar", logo: manosLogo.url },
   { name: "Ibagy", logo: ibagyLogo.url },
 ];
 
