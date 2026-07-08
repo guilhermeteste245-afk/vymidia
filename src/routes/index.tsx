@@ -367,13 +367,13 @@ function Index() {
 
       {/* EMPRESAS QUE CONFIAM */}
       <section id="clientes" className="relative py-8 md:py-12 lg:py-16 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Clientes</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Clientes</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1]">
               Empresas que confiam na <span className="italic text-gradient-gold">VY Mídia</span>.
             </h2>
-            <p className="mt-6 text-muted-foreground font-light">
+            <p className="mt-4 md:mt-6 text-sm md:text-base text-muted-foreground font-light">
               Marcas que escolheram a VY Mídia para fortalecer sua presença digital.
             </p>
           </Reveal>
@@ -382,12 +382,12 @@ function Index() {
               {CLIENTES_LOGOS.map((c) => (
                 <div
                   key={c.name}
-                  className="group bg-background flex items-center justify-center min-h-[120px] md:min-h-[140px] p-6 md:p-8 transition-colors hover:bg-card"
+                  className="group bg-background flex items-center justify-center min-h-[100px] md:min-h-[140px] p-5 md:p-8 transition-colors hover:bg-card"
                 >
                   <img
                     src={c.logo}
                     alt={c.name}
-                    className="max-h-16 md:max-h-20 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500"
+                    className="max-h-14 md:max-h-20 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500"
                     draggable={false}
                   />
                 </div>
