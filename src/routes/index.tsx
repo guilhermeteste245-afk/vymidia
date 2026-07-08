@@ -274,23 +274,23 @@ function Index() {
 
       {/* PORTFOLIO */}
       <section id="portfolio" className="relative py-8 md:py-12 lg:py-16 border-t border-border bg-card/30">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal className="text-center max-w-3xl mx-auto mb-6 md:mb-8">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Portfólio</p>
-            <h2 className="font-display text-5xl md:text-7xl leading-[1.05]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Portfólio</p>
+            <h2 className="font-display text-4xl sm:text-5xl md:text-7xl leading-[1.05]">
               <span className="italic text-gradient-gold">Port</span>fólio
             </h2>
-            <p className="mt-6 text-muted-foreground font-light">
+            <p className="mt-4 md:mt-6 text-sm md:text-base text-muted-foreground font-light">
               Selecionamos trabalhos que traduzem nossa essência: estratégia, estética e resultado.
             </p>
           </Reveal>
           <Reveal>
-            <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-6 md:mb-8">
+            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-6 md:mb-8">
               {CATEGORIES.map((c) => (
                 <button
                   key={c}
                   onClick={() => setFilter(c)}
-                  className={`px-4 py-3 md:px-6 md:py-3 text-[10px] md:text-[11px] tracking-luxury uppercase border transition-all min-w-[90px] ${
+                  className={`px-3 py-2 md:px-6 md:py-3 text-[10px] md:text-[11px] tracking-luxury uppercase border transition-all ${
                     filter === c
                       ? "border-gold bg-gold text-primary-foreground"
                       : "border-border text-muted-foreground hover:border-gold hover:text-gold"
@@ -301,7 +301,7 @@ function Index() {
               ))}
             </div>
           </Reveal>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
             {filtered.map((v, i) => (
               <Reveal key={v.title} delay={i * 80}>
                 <VideoCard {...v} />
