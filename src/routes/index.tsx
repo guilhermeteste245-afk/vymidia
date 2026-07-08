@@ -6,40 +6,42 @@ import {
 } from "lucide-react";
 import { VideoCard } from "@/components/VideoCard";
 import { Reveal } from "@/components/Reveal";
-import ibagyLogo from "@/assets/ibagy-logo.asset.json";
-import sebraeLogo from "@/assets/sebrae-logo.asset.json";
-import nsctvLogo from "@/assets/nsctv-logo.asset.json";
-import manosLogo from "@/assets/manos-logo.asset.json";
+import ibagyLogo from "@/assets/ibagy-logo.png";
+import sebraeLogo from "@/assets/sebrae-logo.png";
+import nsctvLogo from "@/assets/nsctv-logo.png";
+import manosLogo from "@/assets/manos-logo.png";
 
+import manos from "@/assets/manos.mp4";
+import flacidez from "@/assets/flacidez.mp4";
+import inss from "@/assets/inss.mp4";
+import fuscarosa from "@/assets/fuscarosa.mp4";
+import team from "@/assets/team-new.png";
+import juliana from "@/assets/juliana.mp4";
+import heroCover from "@/assets/hero-cover.png";
+import heroMobile from "@/assets/hero-mobile-v2.png";
+import manosPoster from "@/assets/manos-poster.jpg";
+import maesPoster from "@/assets/maes-poster.jpg";
+import flacidezPoster from "@/assets/flacidez-poster.jpg";
+import inssPoster from "@/assets/inss-poster.jpg";
+import internetPoster from "@/assets/internet-poster.jpg";
+import churrascariaPoster from "@/assets/churrascaria-poster.jpg";
+import fuscarosaPoster from "@/assets/fuscarosa-poster.jpg";
+import julianaPoster from "@/assets/juliana-poster.jpg";
+import vyLogo from "@/assets/vy-logo.png";
+import villaRomane from "@/assets/villa-romane.mp4";
+import villaPoster from "@/assets/villa-poster.jpg";
+import manosSabado from "@/assets/manos-sabado.mp4";
+import manosSabadoPoster from "@/assets/manos-sabado-poster.jpg";
+import julianaDeclararPoster from "@/assets/juliana-declarar-poster.jpg";
+import draanaPreench from "@/assets/draana-preench.mp4";
+import draanaPreenchPoster from "@/assets/draana-preench-poster.jpg";
 
-import manos from "@/assets/manos.asset.json";
-import maes from "@/assets/maes.asset.json";
-import flacidez from "@/assets/flacidez.asset.json";
-import inss from "@/assets/inss.asset.json";
-import internet from "@/assets/internet.asset.json";
-import churrascaria from "@/assets/churrascaria.asset.json";
-import fuscarosa from "@/assets/fuscarosa.asset.json";
-import team from "@/assets/team.asset.json";
-import juliana from "@/assets/juliana.asset.json";
-import heroCover from "@/assets/hero-cover.asset.json";
-import heroMobile from "@/assets/hero-mobile.asset.json";
-import manosPoster from "@/assets/manos-poster.asset.json";
-import maesPoster from "@/assets/maes-poster.asset.json";
-import flacidezPoster from "@/assets/flacidez-poster.asset.json";
-import inssPoster from "@/assets/inss-poster.asset.json";
-import internetPoster from "@/assets/internet-poster.asset.json";
-import churrascariaPoster from "@/assets/churrascaria-poster.asset.json";
-import fuscarosaPoster from "@/assets/fuscarosa-poster.asset.json";
-import julianaPoster from "@/assets/juliana-poster.asset.json";
-import vyLogo from "@/assets/vy-logo.asset.json";
-import villaRomane from "@/assets/villa-romane.asset.json";
-import villaPoster from "@/assets/villa-poster.asset.json";
-import manosSabado from "@/assets/manos-sabado.asset.json";
-import manosSabadoPoster from "@/assets/manos-sabado-poster.asset.json";
-import julianaDeclarar from "@/assets/juliana-declarar.asset.json";
-import julianaDeclararPoster from "@/assets/juliana-declarar-poster.asset.json";
-import draanaPreench from "@/assets/draana-preench.asset.json";
-import draanaPreenchPoster from "@/assets/draana-preench-poster.asset.json";
+// Vídeos grandes (>10MB) hospedados externamente via CDN pública da Lovable
+const CDN = "https://vymidia.lovable.app";
+const maes = `${CDN}/__l5e/assets-v1/1246f8e3-b81f-40f1-a86e-a6ecef679cb9/maes.mp4`;
+const internet = `${CDN}/__l5e/assets-v1/bb16a7c4-3613-42ab-9739-b89ae9200ed0/internet.mp4`;
+const churrascaria = `${CDN}/__l5e/assets-v1/69f45a29-e543-4ab2-ad08-229d65b65760/churrascaria.mp4`;
+const julianaDeclarar = `${CDN}/__l5e/assets-v1/2be80e40-bd71-4b13-8bfc-173b9f38b92f/juliana-declarar.mp4`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
