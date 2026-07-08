@@ -427,14 +427,14 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="relative border-t border-border py-12 md:py-16">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-            <div className="flex items-center gap-3">
-              <img src={vyLogo} alt="VY Mídia" className="h-10 w-auto select-none" draggable={false} />
+      <footer className="relative border-t border-border py-10 md:py-16">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 text-center md:text-left">
+            <div className="flex flex-col md:flex-row items-center gap-3">
+              <img src={vyLogo} alt="VY Mídia" className="h-9 md:h-10 w-auto select-none" draggable={false} />
               <span className="text-[10px] tracking-luxury uppercase text-muted-foreground">Estratégia • Conteúdo • Social Media • Tráfego Pago</span>
             </div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-4 md:gap-5">
               {[
                 { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
                 { icon: MessageCircle, href: "https://wa.me/5548998206769", label: "WhatsApp" },
@@ -447,7 +447,7 @@ function Index() {
               ))}
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] tracking-editorial uppercase text-muted-foreground/60">
+          <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4 text-[10px] tracking-editorial uppercase text-muted-foreground/60 text-center">
             <p>© {new Date().getFullYear()} VY Mídia. Todos os direitos reservados.</p>
             <p>Estratégia • Criação • Resultado</p>
           </div>
