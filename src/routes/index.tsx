@@ -203,11 +203,11 @@ function Index() {
 
 
       {/* QUEM SOMOS */}
-      <section id="sobre" className="relative py-32 md:py-40">
-        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+      <section id="sobre" className="relative py-8 md:py-12 lg:py-16">
+        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <Reveal>
             <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Quem Somos</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05] mb-10">
+            <h2 className="font-display text-5xl md:text-6xl leading-[1.05] mb-6 md:mb-8">
               Transformamos ideias em <span className="italic text-gradient-gold">conteúdos</span> que geram <span className="italic">impacto.</span>
             </h2>
             <div className="space-y-6 text-base font-light text-muted-foreground leading-relaxed">
@@ -222,7 +222,7 @@ function Index() {
               </p>
             </div>
 
-            <div className="mt-12 grid grid-cols-3 gap-6 max-w-xl">
+            <div className="mt-8 md:mt-10 grid grid-cols-3 gap-6 max-w-xl">
               {[
                 { n: "4+", l: "Anos de experiência" },
                 { n: "400+", l: "Projetos entregues em 2025" },
@@ -249,9 +249,9 @@ function Index() {
       </section>
 
       {/* SERVICOS */}
-      <section id="servicos" className="relative py-32 md:py-40 border-t border-border">
+      <section id="servicos" className="relative py-8 md:py-12 lg:py-16 border-t border-border">
         <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="text-center max-w-2xl mx-auto mb-20">
+          <Reveal className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
             <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Serviços</p>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
               Soluções completas para sua <span className="italic text-gradient-gold">marca</span>.
@@ -273,9 +273,9 @@ function Index() {
       </section>
 
       {/* PORTFOLIO */}
-      <section id="portfolio" className="relative py-32 md:py-40 border-t border-border bg-card/30">
+      <section id="portfolio" className="relative py-8 md:py-12 lg:py-16 border-t border-border bg-card/30">
         <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="text-center max-w-3xl mx-auto mb-16">
+          <Reveal className="text-center max-w-3xl mx-auto mb-6 md:mb-8">
             <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Portfólio</p>
             <h2 className="font-display text-5xl md:text-7xl leading-[1.05]">
               <span className="italic text-gradient-gold">Port</span>fólio
@@ -285,7 +285,7 @@ function Index() {
             </p>
           </Reveal>
           <Reveal>
-            <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-16">
+            <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-6 md:mb-8">
               {CATEGORIES.map((c) => (
                 <button
                   key={c}
@@ -313,9 +313,9 @@ function Index() {
 
 
       {/* DIFERENCIAIS */}
-      <section className="relative py-32 md:py-40 border-t border-border">
+      <section className="relative py-8 md:py-12 lg:py-16 border-t border-border">
         <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="text-center max-w-3xl mx-auto mb-20">
+          <Reveal className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Diferenciais</p>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
               Mais que vídeos. <span className="italic text-gradient-gold">Estratégia.</span>
@@ -338,9 +338,9 @@ function Index() {
       </section>
 
       {/* DEPOIMENTOS */}
-      <section className="relative py-32 md:py-40 border-t border-border bg-card/30">
+      <section className="relative py-8 md:py-12 lg:py-16 border-t border-border bg-card/30">
         <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="text-center max-w-2xl mx-auto mb-20">
+          <Reveal className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
             <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Depoimentos</p>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
               O que dizem nossos <span className="italic text-gradient-gold">clientes</span>.
@@ -366,9 +366,9 @@ function Index() {
       </section>
 
       {/* EMPRESAS QUE CONFIAM */}
-      <section id="clientes" className="relative py-32 md:py-40 border-t border-border">
+      <section id="clientes" className="relative py-8 md:py-12 lg:py-16 border-t border-border">
         <div className="mx-auto max-w-7xl px-6">
-          <Reveal className="text-center max-w-2xl mx-auto mb-20">
+          <Reveal className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
             <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Clientes</p>
             <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
               Empresas que confiam na <span className="italic text-gradient-gold">VY Mídia</span>.
@@ -382,7 +382,7 @@ function Index() {
               {CLIENTES_LOGOS.map((c) => (
                 <div
                   key={c.name}
-                  className="group bg-background flex items-center justify-center min-h-[160px] md:min-h-[180px] p-10 transition-colors hover:bg-card"
+                  className="group bg-background flex items-center justify-center min-h-[120px] md:min-h-[140px] p-6 md:p-8 transition-colors hover:bg-card"
                 >
                   <img
                     src={c.logo}
@@ -398,7 +398,7 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section id="contato" className="relative py-32 md:py-48 border-t border-border overflow-hidden">
+      <section id="contato" className="relative py-8 md:py-12 lg:py-16 border-t border-border overflow-hidden">
 
         <div className="absolute inset-0 hero-radial" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] aspect-square rounded-full bg-gold/10 blur-[140px]" />
@@ -408,7 +408,7 @@ function Index() {
             <h2 className="font-display text-4xl md:text-6xl leading-[1.1]">
               Seu conteúdo é a forma como sua marca será <span className="italic text-gradient-gold">lembrada.</span>
             </h2>
-            <div className="mt-12 space-y-2 font-display text-2xl md:text-3xl text-muted-foreground">
+            <div className="mt-8 md:mt-10 space-y-2 font-display text-2xl md:text-3xl text-muted-foreground">
               <p>Mais presença.</p>
               <p className="italic">Mais autoridade.</p>
               <p className="text-gold">Mais resultado.</p>
@@ -417,7 +417,7 @@ function Index() {
               href={WHATSAPP_BUDGET_LINK}
               target="_blank"
               rel="noreferrer"
-              className="group mt-14 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[11px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all"
+              className="group mt-8 md:mt-10 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[11px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all"
             >
               Vamos Conversar
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
@@ -427,7 +427,7 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="relative border-t border-border py-16">
+      <footer className="relative border-t border-border py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
             <div className="flex items-center gap-3">
