@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
       { name: "keywords", content: "Gestão de Tráfego Pago, Meta Ads, Google Ads, Performance Digital, Agência de Marketing Digital, Social Media, Produção de Conteúdo, Estratégia Digital, Gestão de Redes Sociais, VY Mídia" },
       { property: "og:title", content: "VY Mídia — Agência de Marketing Digital" },
       { property: "og:description", content: "Estratégia Digital • Produção de Conteúdo • Gestão de Tráfego Pago (Meta Ads e Google Ads) • Social Media." },
-      { property: "og:image", content: team.url },
+      { property: "og:image", content: team },
     ],
   }),
   component: Index,
@@ -65,18 +65,18 @@ const WHATSAPP_BUDGET_LINK = "https://wa.me/5548998206769?text=Olá!%20Conheci%2
 
 
 const PORTFOLIO = [
-  { src: manos.url, poster: manosPoster.url, title: "Mano's Gastrobar", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
-  { src: churrascaria.url, poster: churrascariaPoster.url, title: "Churrascaria 100Tenário", client: "Tradição • Gastronomia", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/churrascaria100tenario/" },
-  { src: fuscarosa.url, poster: fuscarosaPoster.url, title: "Fusca Rosa", client: "Bar • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/fuskarosabeer/" },
-  { src: flacidez.url, poster: flacidezPoster.url, title: "Dra Ana", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/" },
-  { src: inss.url, poster: inssPoster.url, title: "Tiecher Pegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
-  { src: internet.url, poster: internetPoster.url, title: "Julio Lab Hacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
-  { src: juliana.url, poster: julianaPoster.url, title: "Juliana Aranda", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
-  { src: maes.url, poster: maesPoster.url, title: "Jardim dos Fuscas", client: "Restaurante", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
-  { src: villaRomane.url, poster: villaPoster.url, title: "Villa Romane", client: "Imobiliário • Alto Padrão", category: "Imobiliário" as Cat, instagram: "https://www.instagram.com/ibagy/" },
-  { src: manosSabado.url, poster: manosSabadoPoster.url, title: "Mano's Gastrobar", client: "Restaurante", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
-  { src: julianaDeclarar.url, poster: julianaDeclararPoster.url, title: "Juliana Aranda", client: "Contabilidade", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/inovva.cont/reels/" },
-  { src: draanaPreench.url, poster: draanaPreenchPoster.url, title: "Dra Ana", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/reels/" },
+  { src: manos, poster: manosPoster, title: "Mano's Gastrobar", client: "Gastronomia • Experiência", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
+  { src: churrascaria, poster: churrascariaPoster, title: "Churrascaria 100Tenário", client: "Tradição • Gastronomia", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/churrascaria100tenario/" },
+  { src: fuscarosa, poster: fuscarosaPoster, title: "Fusca Rosa", client: "Bar • Lifestyle", category: "Eventos" as Cat, instagram: "https://www.instagram.com/fuskarosabeer/" },
+  { src: flacidez, poster: flacidezPoster, title: "Dra Ana", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/" },
+  { src: inss, poster: inssPoster, title: "Tiecher Pegoraro", client: "Advocacia • INSS", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/tiecherpegoraro/" },
+  { src: internet, poster: internetPoster, title: "Julio Lab Hacker", client: "Crimes Digitais", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliolabhacker/" },
+  { src: juliana, poster: julianaPoster, title: "Juliana Aranda", client: "Previdência • Planejamento", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/juliana.arandacondeixa/" },
+  { src: maes, poster: maesPoster, title: "Jardim dos Fuscas", client: "Restaurante", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/jardimdosfuscas/" },
+  { src: villaRomane, poster: villaPoster, title: "Villa Romane", client: "Imobiliário • Alto Padrão", category: "Imobiliário" as Cat, instagram: "https://www.instagram.com/ibagy/" },
+  { src: manosSabado, poster: manosSabadoPoster, title: "Mano's Gastrobar", client: "Restaurante", category: "Restaurantes" as Cat, instagram: "https://www.instagram.com/manosgastrobar/reels/" },
+  { src: julianaDeclarar, poster: julianaDeclararPoster, title: "Juliana Aranda", client: "Contabilidade", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/inovva.cont/reels/" },
+  { src: draanaPreench, poster: draanaPreenchPoster, title: "Dra Ana", client: "Clínica de Estética", category: "Marcas Pessoais" as Cat, instagram: "https://www.instagram.com/draanapaulaneves_/reels/" },
 ];
 
 const CLIENTES = [
@@ -114,10 +114,10 @@ const SERVICES = [
 ];
 
 const CLIENTES_LOGOS: { name: string; logo: string }[] = [
-  { name: "Sebrae", logo: sebraeLogo.url },
-  { name: "NSC TV", logo: nsctvLogo.url },
-  { name: "Mano's Gastrobar", logo: manosLogo.url },
-  { name: "Ibagy", logo: ibagyLogo.url },
+  { name: "Sebrae", logo: sebraeLogo },
+  { name: "NSC TV", logo: nsctvLogo },
+  { name: "Mano's Gastrobar", logo: manosLogo },
+  { name: "Ibagy", logo: ibagyLogo },
 ];
 
 
@@ -149,7 +149,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-[120] border-b border-gold/20 bg-background/95 backdrop-blur-xl shadow-[0_2px_30px_rgba(0,0,0,0.45)]">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 md:px-6 md:py-3.5">
           <a href="#top" className="flex items-center gap-3 shrink-0">
-            <img src={vyLogo.url} alt="VY Mídia" className="h-8 md:h-10 w-auto select-none" draggable={false} />
+            <img src={vyLogo} alt="VY Mídia" className="h-8 md:h-10 w-auto select-none" draggable={false} />
             <span className="hidden sm:inline text-[10px] tracking-luxury text-muted-foreground uppercase">Mídia</span>
           </a>
           <nav className="flex items-center gap-2 sm:gap-4 md:gap-6">
@@ -178,14 +178,14 @@ function Index() {
       >
         {/* Mobile: vertical artwork, fully visible (no crop) */}
         <img
-          src={heroMobile.url}
+          src={heroMobile}
           alt="VY Mídia — Portfólio"
           className="md:hidden block max-h-[calc(100svh-72px)] max-w-full w-auto h-auto object-contain select-none mt-[72px]"
           draggable={false}
         />
         {/* Desktop / tablet: horizontal cover, full image visible */}
         <img
-          src={heroCover.url}
+          src={heroCover}
           alt=""
           aria-hidden="true"
           className="hidden md:block max-h-full max-w-full w-auto h-auto object-contain select-none pt-[72px]"
@@ -238,7 +238,7 @@ function Index() {
           <Reveal delay={200}>
             <div className="relative">
               <div className="absolute -inset-4 border border-gold/20 -z-10" />
-              <img src={team.url} alt="Equipe VY Mídia" className="w-full object-cover aspect-[4/5]" />
+              <img src={team} alt="Equipe VY Mídia" className="w-full object-cover aspect-[4/5]" />
               <div className="absolute -bottom-6 -right-6 glass px-6 py-4">
                 <p className="text-[10px] tracking-luxury uppercase text-gold">Desde 2023</p>
                 <p className="font-display text-xl mt-1">O conteúdo cria a marca</p>
@@ -431,7 +431,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
             <div className="flex items-center gap-3">
-              <img src={vyLogo.url} alt="VY Mídia" className="h-10 w-auto select-none" draggable={false} />
+              <img src={vyLogo} alt="VY Mídia" className="h-10 w-auto select-none" draggable={false} />
               <span className="text-[10px] tracking-luxury uppercase text-muted-foreground">Estratégia • Conteúdo • Social Media • Tráfego Pago</span>
             </div>
             <div className="flex items-center gap-5">
