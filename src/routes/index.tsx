@@ -402,13 +402,13 @@ function Index() {
 
         <div className="absolute inset-0 hero-radial" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] aspect-square rounded-full bg-gold/10 blur-[140px]" />
-        <div className="relative mx-auto max-w-4xl px-6 text-center">
+        <div className="relative mx-auto max-w-4xl px-4 md:px-6 text-center">
           <Reveal>
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-8">— Vamos Criar</p>
-            <h2 className="font-display text-4xl md:text-6xl leading-[1.1]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6 md:mb-8">— Vamos Criar</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1]">
               Seu conteúdo é a forma como sua marca será <span className="italic text-gradient-gold">lembrada.</span>
             </h2>
-            <div className="mt-8 md:mt-10 space-y-2 font-display text-2xl md:text-3xl text-muted-foreground">
+            <div className="mt-6 md:mt-10 space-y-2 font-display text-lg sm:text-2xl md:text-3xl text-muted-foreground">
               <p>Mais presença.</p>
               <p className="italic">Mais autoridade.</p>
               <p className="text-gold">Mais resultado.</p>
@@ -417,7 +417,7 @@ function Index() {
               href={WHATSAPP_BUDGET_LINK}
               target="_blank"
               rel="noreferrer"
-              className="group mt-8 md:mt-10 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[11px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all"
+              className="group mt-6 md:mt-10 inline-flex items-center gap-3 bg-gold px-6 py-4 md:px-10 md:py-5 text-[11px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all"
             >
               Vamos Conversar
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
