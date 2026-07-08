@@ -339,22 +339,22 @@ function Index() {
 
       {/* DEPOIMENTOS */}
       <section className="relative py-8 md:py-12 lg:py-16 border-t border-border bg-card/30">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Depoimentos</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Depoimentos</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1]">
               O que dizem nossos <span className="italic text-gradient-gold">clientes</span>.
             </h2>
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-5 md:gap-8">
             {DEPOIMENTOS.map((d, i) => (
               <Reveal key={d.author} delay={i * 100}>
-                <figure className="h-full glass p-10 flex flex-col">
-                  <span className="font-display text-6xl text-gold leading-none">"</span>
-                  <blockquote className="mt-4 font-display text-xl italic leading-snug text-foreground flex-1">
+                <figure className="h-full glass p-6 md:p-10 flex flex-col">
+                  <span className="font-display text-5xl md:text-6xl text-gold leading-none">"</span>
+                  <blockquote className="mt-3 md:mt-4 font-display text-base md:text-xl italic leading-snug text-foreground flex-1">
                     {d.quote}
                   </blockquote>
-                  <figcaption className="mt-8 pt-6 border-t border-border">
+                  <figcaption className="mt-6 md:mt-8 pt-5 md:pt-6 border-t border-border">
                     <p className="text-sm text-foreground">{d.author}</p>
                     <p className="text-[10px] tracking-luxury uppercase text-muted-foreground mt-1">{d.role}</p>
                   </figcaption>
