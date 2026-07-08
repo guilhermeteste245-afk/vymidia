@@ -314,22 +314,22 @@ function Index() {
 
       {/* DIFERENCIAIS */}
       <section className="relative py-8 md:py-12 lg:py-16 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Diferenciais</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Diferenciais</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1]">
               Mais que vídeos. <span className="italic text-gradient-gold">Estratégia.</span>
             </h2>
           </Reveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-px bg-border">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-px bg-border">
             {DIFERENCIAIS.map((d, i) => (
               <Reveal key={d.title} delay={i * 60}>
-                <div className="h-full bg-background p-8 text-center">
-                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-gold/40">
+                <div className="h-full bg-background p-5 md:p-8 text-center">
+                  <div className="mx-auto mb-4 md:mb-6 flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full border border-gold/40">
                     <d.icon className="h-5 w-5 text-gold" strokeWidth={1.2} />
                   </div>
-                  <h3 className="font-display text-xl">{d.title}</h3>
-                  <p className="mt-3 text-xs font-light text-muted-foreground leading-relaxed">{d.desc}</p>
+                  <h3 className="font-display text-base md:text-xl">{d.title}</h3>
+                  <p className="mt-2 md:mt-3 text-xs font-light text-muted-foreground leading-relaxed">{d.desc}</p>
                 </div>
               </Reveal>
             ))}
