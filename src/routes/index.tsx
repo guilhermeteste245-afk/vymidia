@@ -250,21 +250,21 @@ function Index() {
 
       {/* SERVICOS */}
       <section id="servicos" className="relative py-8 md:py-12 lg:py-16 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Serviços</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Serviços</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1]">
               Soluções completas para sua <span className="italic text-gradient-gold">marca</span>.
             </h2>
           </Reveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
             {SERVICES.map((s, i) => (
               <Reveal key={s.title} delay={i * 80}>
-                <div className="group h-full bg-background p-10 transition-colors hover:bg-card">
+                <div className="group h-full bg-background p-6 md:p-10 transition-colors hover:bg-card">
                   <s.icon className="h-8 w-8 text-gold" strokeWidth={1} />
-                  <h3 className="mt-8 font-display text-2xl">{s.title}</h3>
-                  <p className="mt-4 text-sm font-light text-muted-foreground leading-relaxed">{s.desc}</p>
-                  <div className="mt-8 h-px w-12 bg-gold/40 group-hover:w-24 transition-all duration-700" />
+                  <h3 className="mt-5 md:mt-8 font-display text-xl md:text-2xl">{s.title}</h3>
+                  <p className="mt-3 md:mt-4 text-sm font-light text-muted-foreground leading-relaxed">{s.desc}</p>
+                  <div className="mt-6 md:mt-8 h-px w-12 bg-gold/40 group-hover:w-24 transition-all duration-700" />
                 </div>
               </Reveal>
             ))}
