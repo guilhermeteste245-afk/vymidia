@@ -204,13 +204,13 @@ function Index() {
 
       {/* QUEM SOMOS */}
       <section id="sobre" className="relative py-8 md:py-12 lg:py-16">
-        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           <Reveal>
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Quem Somos</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05] mb-6 md:mb-8">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Quem Somos</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1] mb-5 md:mb-8">
               Transformamos ideias em <span className="italic text-gradient-gold">conteúdos</span> que geram <span className="italic">impacto.</span>
             </h2>
-            <div className="space-y-6 text-base font-light text-muted-foreground leading-relaxed">
+            <div className="space-y-4 md:space-y-6 text-sm md:text-base font-light text-muted-foreground leading-relaxed">
               <p>
                 A VY Mídia é uma agência completa de marketing digital. Unimos Estratégia Digital, Produção de Conteúdo,
                 Gestão de Redes Sociais e Gestão de Tráfego Pago (Meta Ads e Google Ads) para fortalecer a presença
@@ -222,26 +222,26 @@ function Index() {
               </p>
             </div>
 
-            <div className="mt-8 md:mt-10 grid grid-cols-3 gap-6 max-w-xl">
+            <div className="mt-6 md:mt-10 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
               {[
                 { n: "4+", l: "Anos de experiência" },
                 { n: "400+", l: "Projetos entregues em 2025" },
                 { n: "200+", l: "Horas em Campo em 2025" },
               ].map((s) => (
                 <div key={s.l}>
-                  <p className="font-display text-4xl text-gold">{s.n}</p>
-                  <p className="mt-2 text-[10px] tracking-luxury uppercase text-muted-foreground">{s.l}</p>
+                  <p className="font-display text-2xl sm:text-3xl md:text-4xl text-gold">{s.n}</p>
+                  <p className="mt-2 text-[9px] sm:text-[10px] tracking-luxury uppercase text-muted-foreground leading-tight">{s.l}</p>
                 </div>
               ))}
             </div>
           </Reveal>
           <Reveal delay={200}>
             <div className="relative">
-              <div className="absolute -inset-4 border border-gold/20 -z-10" />
+              <div className="absolute -inset-3 md:-inset-4 border border-gold/20 -z-10" />
               <img src={team} alt="Equipe VY Mídia" className="w-full object-cover aspect-[4/5]" />
-              <div className="absolute -bottom-6 -right-6 glass px-6 py-4">
-                <p className="text-[10px] tracking-luxury uppercase text-gold">Desde 2023</p>
-                <p className="font-display text-xl mt-1">O conteúdo cria a marca</p>
+              <div className="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 glass px-4 py-3 md:px-6 md:py-4 max-w-[80%]">
+                <p className="text-[9px] md:text-[10px] tracking-luxury uppercase text-gold">Desde 2023</p>
+                <p className="font-display text-base md:text-xl mt-1">O conteúdo cria a marca</p>
               </div>
             </div>
           </Reveal>
@@ -250,21 +250,21 @@ function Index() {
 
       {/* SERVICOS */}
       <section id="servicos" className="relative py-8 md:py-12 lg:py-16 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Serviços</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Serviços</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1]">
               Soluções completas para sua <span className="italic text-gradient-gold">marca</span>.
             </h2>
           </Reveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
             {SERVICES.map((s, i) => (
               <Reveal key={s.title} delay={i * 80}>
-                <div className="group h-full bg-background p-10 transition-colors hover:bg-card">
+                <div className="group h-full bg-background p-6 md:p-10 transition-colors hover:bg-card">
                   <s.icon className="h-8 w-8 text-gold" strokeWidth={1} />
-                  <h3 className="mt-8 font-display text-2xl">{s.title}</h3>
-                  <p className="mt-4 text-sm font-light text-muted-foreground leading-relaxed">{s.desc}</p>
-                  <div className="mt-8 h-px w-12 bg-gold/40 group-hover:w-24 transition-all duration-700" />
+                  <h3 className="mt-5 md:mt-8 font-display text-xl md:text-2xl">{s.title}</h3>
+                  <p className="mt-3 md:mt-4 text-sm font-light text-muted-foreground leading-relaxed">{s.desc}</p>
+                  <div className="mt-6 md:mt-8 h-px w-12 bg-gold/40 group-hover:w-24 transition-all duration-700" />
                 </div>
               </Reveal>
             ))}
@@ -274,23 +274,23 @@ function Index() {
 
       {/* PORTFOLIO */}
       <section id="portfolio" className="relative py-8 md:py-12 lg:py-16 border-t border-border bg-card/30">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal className="text-center max-w-3xl mx-auto mb-6 md:mb-8">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Portfólio</p>
-            <h2 className="font-display text-5xl md:text-7xl leading-[1.05]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Portfólio</p>
+            <h2 className="font-display text-4xl sm:text-5xl md:text-7xl leading-[1.05]">
               <span className="italic text-gradient-gold">Port</span>fólio
             </h2>
-            <p className="mt-6 text-muted-foreground font-light">
+            <p className="mt-4 md:mt-6 text-sm md:text-base text-muted-foreground font-light">
               Selecionamos trabalhos que traduzem nossa essência: estratégia, estética e resultado.
             </p>
           </Reveal>
           <Reveal>
-            <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-6 md:mb-8">
+            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-6 md:mb-8">
               {CATEGORIES.map((c) => (
                 <button
                   key={c}
                   onClick={() => setFilter(c)}
-                  className={`px-4 py-3 md:px-6 md:py-3 text-[10px] md:text-[11px] tracking-luxury uppercase border transition-all min-w-[90px] ${
+                  className={`px-3 py-2 md:px-6 md:py-3 text-[10px] md:text-[11px] tracking-luxury uppercase border transition-all ${
                     filter === c
                       ? "border-gold bg-gold text-primary-foreground"
                       : "border-border text-muted-foreground hover:border-gold hover:text-gold"
@@ -301,7 +301,7 @@ function Index() {
               ))}
             </div>
           </Reveal>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
             {filtered.map((v, i) => (
               <Reveal key={v.title} delay={i * 80}>
                 <VideoCard {...v} />
@@ -314,22 +314,22 @@ function Index() {
 
       {/* DIFERENCIAIS */}
       <section className="relative py-8 md:py-12 lg:py-16 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Diferenciais</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Diferenciais</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1]">
               Mais que vídeos. <span className="italic text-gradient-gold">Estratégia.</span>
             </h2>
           </Reveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-px bg-border">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-px bg-border">
             {DIFERENCIAIS.map((d, i) => (
               <Reveal key={d.title} delay={i * 60}>
-                <div className="h-full bg-background p-8 text-center">
-                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full border border-gold/40">
+                <div className="h-full bg-background p-5 md:p-8 text-center">
+                  <div className="mx-auto mb-4 md:mb-6 flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full border border-gold/40">
                     <d.icon className="h-5 w-5 text-gold" strokeWidth={1.2} />
                   </div>
-                  <h3 className="font-display text-xl">{d.title}</h3>
-                  <p className="mt-3 text-xs font-light text-muted-foreground leading-relaxed">{d.desc}</p>
+                  <h3 className="font-display text-base md:text-xl">{d.title}</h3>
+                  <p className="mt-2 md:mt-3 text-xs font-light text-muted-foreground leading-relaxed">{d.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -339,22 +339,22 @@ function Index() {
 
       {/* DEPOIMENTOS */}
       <section className="relative py-8 md:py-12 lg:py-16 border-t border-border bg-card/30">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Depoimentos</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Depoimentos</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1]">
               O que dizem nossos <span className="italic text-gradient-gold">clientes</span>.
             </h2>
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-5 md:gap-8">
             {DEPOIMENTOS.map((d, i) => (
               <Reveal key={d.author} delay={i * 100}>
-                <figure className="h-full glass p-10 flex flex-col">
-                  <span className="font-display text-6xl text-gold leading-none">"</span>
-                  <blockquote className="mt-4 font-display text-xl italic leading-snug text-foreground flex-1">
+                <figure className="h-full glass p-6 md:p-10 flex flex-col">
+                  <span className="font-display text-5xl md:text-6xl text-gold leading-none">"</span>
+                  <blockquote className="mt-3 md:mt-4 font-display text-base md:text-xl italic leading-snug text-foreground flex-1">
                     {d.quote}
                   </blockquote>
-                  <figcaption className="mt-8 pt-6 border-t border-border">
+                  <figcaption className="mt-6 md:mt-8 pt-5 md:pt-6 border-t border-border">
                     <p className="text-sm text-foreground">{d.author}</p>
                     <p className="text-[10px] tracking-luxury uppercase text-muted-foreground mt-1">{d.role}</p>
                   </figcaption>
@@ -367,13 +367,13 @@ function Index() {
 
       {/* EMPRESAS QUE CONFIAM */}
       <section id="clientes" className="relative py-8 md:py-12 lg:py-16 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
           <Reveal className="text-center max-w-2xl mx-auto mb-8 md:mb-12">
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Clientes</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Clientes</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1]">
               Empresas que confiam na <span className="italic text-gradient-gold">VY Mídia</span>.
             </h2>
-            <p className="mt-6 text-muted-foreground font-light">
+            <p className="mt-4 md:mt-6 text-sm md:text-base text-muted-foreground font-light">
               Marcas que escolheram a VY Mídia para fortalecer sua presença digital.
             </p>
           </Reveal>
@@ -382,12 +382,12 @@ function Index() {
               {CLIENTES_LOGOS.map((c) => (
                 <div
                   key={c.name}
-                  className="group bg-background flex items-center justify-center min-h-[120px] md:min-h-[140px] p-6 md:p-8 transition-colors hover:bg-card"
+                  className="group bg-background flex items-center justify-center min-h-[100px] md:min-h-[140px] p-5 md:p-8 transition-colors hover:bg-card"
                 >
                   <img
                     src={c.logo}
                     alt={c.name}
-                    className="max-h-16 md:max-h-20 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500"
+                    className="max-h-14 md:max-h-20 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500"
                     draggable={false}
                   />
                 </div>
@@ -402,13 +402,13 @@ function Index() {
 
         <div className="absolute inset-0 hero-radial" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] aspect-square rounded-full bg-gold/10 blur-[140px]" />
-        <div className="relative mx-auto max-w-4xl px-6 text-center">
+        <div className="relative mx-auto max-w-4xl px-4 md:px-6 text-center">
           <Reveal>
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-8">— Vamos Criar</p>
-            <h2 className="font-display text-4xl md:text-6xl leading-[1.1]">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6 md:mb-8">— Vamos Criar</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1]">
               Seu conteúdo é a forma como sua marca será <span className="italic text-gradient-gold">lembrada.</span>
             </h2>
-            <div className="mt-8 md:mt-10 space-y-2 font-display text-2xl md:text-3xl text-muted-foreground">
+            <div className="mt-6 md:mt-10 space-y-2 font-display text-lg sm:text-2xl md:text-3xl text-muted-foreground">
               <p>Mais presença.</p>
               <p className="italic">Mais autoridade.</p>
               <p className="text-gold">Mais resultado.</p>
@@ -417,7 +417,7 @@ function Index() {
               href={WHATSAPP_BUDGET_LINK}
               target="_blank"
               rel="noreferrer"
-              className="group mt-8 md:mt-10 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[11px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all"
+              className="group mt-6 md:mt-10 inline-flex items-center gap-3 bg-gold px-6 py-4 md:px-10 md:py-5 text-[11px] tracking-luxury uppercase text-primary-foreground hover:bg-gold-soft transition-all"
             >
               Vamos Conversar
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
@@ -427,14 +427,14 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="relative border-t border-border py-12 md:py-16">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-            <div className="flex items-center gap-3">
-              <img src={vyLogo} alt="VY Mídia" className="h-10 w-auto select-none" draggable={false} />
+      <footer className="relative border-t border-border py-10 md:py-16">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 text-center md:text-left">
+            <div className="flex flex-col md:flex-row items-center gap-3">
+              <img src={vyLogo} alt="VY Mídia" className="h-9 md:h-10 w-auto select-none" draggable={false} />
               <span className="text-[10px] tracking-luxury uppercase text-muted-foreground">Estratégia • Conteúdo • Social Media • Tráfego Pago</span>
             </div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-4 md:gap-5">
               {[
                 { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
                 { icon: MessageCircle, href: "https://wa.me/5548998206769", label: "WhatsApp" },
@@ -447,7 +447,7 @@ function Index() {
               ))}
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] tracking-editorial uppercase text-muted-foreground/60">
+          <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4 text-[10px] tracking-editorial uppercase text-muted-foreground/60 text-center">
             <p>© {new Date().getFullYear()} VY Mídia. Todos os direitos reservados.</p>
             <p>Estratégia • Criação • Resultado</p>
           </div>
