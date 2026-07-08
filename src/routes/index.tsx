@@ -204,13 +204,13 @@ function Index() {
 
       {/* QUEM SOMOS */}
       <section id="sobre" className="relative py-8 md:py-12 lg:py-16">
-        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           <Reveal>
-            <p className="text-[10px] tracking-luxury uppercase text-gold mb-6">— Quem Somos</p>
-            <h2 className="font-display text-5xl md:text-6xl leading-[1.05] mb-6 md:mb-8">
+            <p className="text-[10px] tracking-luxury uppercase text-gold mb-4 md:mb-6">— Quem Somos</p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl leading-[1.1] mb-5 md:mb-8">
               Transformamos ideias em <span className="italic text-gradient-gold">conteúdos</span> que geram <span className="italic">impacto.</span>
             </h2>
-            <div className="space-y-6 text-base font-light text-muted-foreground leading-relaxed">
+            <div className="space-y-4 md:space-y-6 text-sm md:text-base font-light text-muted-foreground leading-relaxed">
               <p>
                 A VY Mídia é uma agência completa de marketing digital. Unimos Estratégia Digital, Produção de Conteúdo,
                 Gestão de Redes Sociais e Gestão de Tráfego Pago (Meta Ads e Google Ads) para fortalecer a presença
@@ -222,26 +222,26 @@ function Index() {
               </p>
             </div>
 
-            <div className="mt-8 md:mt-10 grid grid-cols-3 gap-6 max-w-xl">
+            <div className="mt-6 md:mt-10 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
               {[
                 { n: "4+", l: "Anos de experiência" },
                 { n: "400+", l: "Projetos entregues em 2025" },
                 { n: "200+", l: "Horas em Campo em 2025" },
               ].map((s) => (
                 <div key={s.l}>
-                  <p className="font-display text-4xl text-gold">{s.n}</p>
-                  <p className="mt-2 text-[10px] tracking-luxury uppercase text-muted-foreground">{s.l}</p>
+                  <p className="font-display text-2xl sm:text-3xl md:text-4xl text-gold">{s.n}</p>
+                  <p className="mt-2 text-[9px] sm:text-[10px] tracking-luxury uppercase text-muted-foreground leading-tight">{s.l}</p>
                 </div>
               ))}
             </div>
           </Reveal>
           <Reveal delay={200}>
             <div className="relative">
-              <div className="absolute -inset-4 border border-gold/20 -z-10" />
+              <div className="absolute -inset-3 md:-inset-4 border border-gold/20 -z-10" />
               <img src={team} alt="Equipe VY Mídia" className="w-full object-cover aspect-[4/5]" />
-              <div className="absolute -bottom-6 -right-6 glass px-6 py-4">
-                <p className="text-[10px] tracking-luxury uppercase text-gold">Desde 2023</p>
-                <p className="font-display text-xl mt-1">O conteúdo cria a marca</p>
+              <div className="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 glass px-4 py-3 md:px-6 md:py-4 max-w-[80%]">
+                <p className="text-[9px] md:text-[10px] tracking-luxury uppercase text-gold">Desde 2023</p>
+                <p className="font-display text-base md:text-xl mt-1">O conteúdo cria a marca</p>
               </div>
             </div>
           </Reveal>
